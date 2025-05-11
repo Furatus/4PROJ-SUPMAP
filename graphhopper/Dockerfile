@@ -5,11 +5,11 @@ FROM israelhikingmap/graphhopper
 WORKDIR /graphhopper
 
 # Copier les fichiers de configuration et de données
-ENV JAVA_OPTS: "-Xmx4g -Xms2g"
+ENV JAVA_OPTS: "-Xmx8g -Xms2g"
 EXPOSE 8989
 COPY ./config/graphhopper-config.yml ./
 # Télécharger le fichier .pbf
-RUN wget -O /data/centre-latest.osm.pbf https://download.geofabrik.de/europe/france/centre-latest.osm.pbf
+RUN wget -O /data/france-latest.osm.pbf https://download.geofabrik.de/europe/france-latest.osm.pbf
 # Commande par défaut pour exécuter GraphHopper
 ENTRYPOINT [ "./graphhopper.sh", "-c", "graphhopper-config.yml" ]
 
