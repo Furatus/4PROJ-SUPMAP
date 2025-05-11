@@ -31,7 +31,7 @@ Liste des variables d'environnement :
 ```bash
 VITE_GOOGLE_MAPS_API_KEY= <YOUR_GOOGLE_MAPS_API_KEY>
 VITE_API_GRAPHHOPPER_URL= http:<IP of Server running the graphhopper>//:8989 # Uniquement si le serveur Graphhopper est lancé dans le même docker compose
-VITE_API_SERVER_URL=http://<IP of Server running the api>:3000/api # Même raisonnement ici
+VITE_API_SERVER_URL=https://<IP of Server running the api>:3000/api # Même raisonnement ici
 VITE_GOOGLE_CLIENT_ID= <YOUR_GOOGLE_CLIENT_ID>
 ```
 
