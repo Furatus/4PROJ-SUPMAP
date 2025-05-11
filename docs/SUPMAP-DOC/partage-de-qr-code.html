@@ -1,0 +1,51 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US" data-preset="contrast" data-primary-color="#307FFF"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="robots" content="noindex"><meta name="built-on" content="2025-05-11T14:09:42.797275"><title>Partage de QR Code | 4PROJ-DOC</title><script type="application/json" id="virtual-toc-data">[{"id":"technologies-utilis-es","level":0,"title":"Technologies utilisées","anchor":"#technologies-utilis-es"},{"id":"fonctionnement","level":0,"title":"Fonctionnement","anchor":"#fonctionnement"}]</script><script type="application/json" id="topic-shortcuts"></script><link href="https://resources.jetbrains.com/writerside/apidoc/6.22.0-b776/app.css" rel="stylesheet"><meta name="msapplication-TileColor" content="#000000"><link rel="apple-touch-icon" sizes="180x180" href="https://jetbrains.com/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="https://jetbrains.com/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="https://jetbrains.com/favicon-16x16.png"><meta name="msapplication-TileImage" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-144x144.png"><meta name="msapplication-square70x70logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-70x70.png"><meta name="msapplication-square150x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-150x150.png"><meta name="msapplication-wide310x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x150.png"><meta name="msapplication-square310x310logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x310.png"><meta name="image" content=""><!-- Open Graph --><meta property="og:title" content="Partage de QR Code | 4PROJ-DOC"><meta property="og:description" content=""><meta property="og:image" content=""><meta property="og:site_name" content="4PROJ-DOC Help"><meta property="og:type" content="website"><meta property="og:locale" content="en_US"><meta property="og:url" content="writerside-documentation/partage-de-qr-code.html"><!-- End Open Graph --><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content=""><meta name="twitter:title" content="Partage de QR Code | 4PROJ-DOC"><meta name="twitter:description" content=""><meta name="twitter:creator" content=""><meta name="twitter:image:src" content=""><!-- End Twitter Card --><!-- Schema.org WebPage --><script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "@id": "writerside-documentation/partage-de-qr-code.html#webpage",
+    "url": "writerside-documentation/partage-de-qr-code.html",
+    "name": "Partage de QR Code | 4PROJ-DOC",
+    "description": "",
+    "image": "",
+    "inLanguage":"en-US"
+}</script><!-- End Schema.org --><!-- Schema.org WebSite --><script type="application/ld+json">{
+    "@type": "WebSite",
+    "@id": "writerside-documentation/#website",
+    "url": "writerside-documentation/",
+    "name": "4PROJ-DOC Help"
+}</script><!-- End Schema.org --></head><body data-id="Partage-de-QR-Code" data-main-title="Partage de QR Code" data-article-props="{&quot;seeAlsoStyle&quot;:&quot;links&quot;}" data-template="article" data-breadcrumbs="Interface-Web.md|Interface Web"><div class="wrapper"><main class="panel _main"><header class="panel__header"><div class="container"><h3>4PROJ-DOC  Help</h3><div class="panel-trigger"></div></div></header><section class="panel__content"><div class="container"><article class="article" data-shortcut-switcher="inactive"><h1 data-toc="Partage-de-QR-Code" id="Partage-de-QR-Code.md">Partage de QR Code</h1><section class="chapter"><h2 id="technologies-utilis-es" data-toc="technologies-utilis-es">Technologies utilis&eacute;es</h2><ul class="list _bullet" id="-zi5f65_5"><li class="list__item" id="-zi5f65_6"><p id="-zi5f65_8">qrcode.react : Biblioth&egrave;que pour g&eacute;n&eacute;rer des QR codes &agrave; partir de l'url</p></li><li class="list__item" id="-zi5f65_7"><p id="-zi5f65_9">app_link : permet de cr&eacute;er des liens qui redirigent automatiquement l'utilisateur vers une application mobile install&eacute;e,</p></li></ul></section><section class="chapter"><h2 id="fonctionnement" data-toc="fonctionnement">Fonctionnement</h2><p id="-zi5f65_10">La fonctionnalit&eacute; de partage de QR code permet &agrave; un utilisateur :</p><ul class="list _bullet" id="-zi5f65_11"><li class="list__item" id="-zi5f65_14"><p id="-zi5f65_17">De g&eacute;n&eacute;rer dynamiquement un QR code contenant un lien unique et de l'afficher dans une popup.</p></li><li class="list__item" id="-zi5f65_15"><p id="-zi5f65_18">De permettre &agrave; un autre utilisateur de scanner ce QR code avec un smartphone pour &ecirc;tre redirig&eacute; automatiquement.</p></li><li class="list__item" id="-zi5f65_16"><p id="-zi5f65_19">De copier le lien associ&eacute; dans le presse-papier.</p></li></ul><p id="-zi5f65_12">Ce QR code encode l'url avec les coordonn&eacute;es d'arriv&eacute;e et non d&eacute;part puisque l'itin&eacute;raire est toujours debuter a la postion de l'utilisateur. L'utilisateur peut choisir l'itin&eacute;raire qu'il souhaite utiliser.</p><section class="chapter"><h3 id="code" data-toc="code">Code</h3><p id="-zi5f65_20">Cette m&eacute;thode &eacute;coute en continu les liens d'application (App Links) re&ccedil;us lorsque l'utilisateur ouvre l'application via un QR code ou une URL sp&eacute;ciale.</p><p id="-zi5f65_21"><span class="control" id="-zi5f65_24">D&eacute;tail du fonctionnement</span>:</p><ul class="list _bullet" id="-zi5f65_22"><li class="list__item" id="-zi5f65_25"><p id="-zi5f65_28">La m&eacute;thode utilise le flux uriLinkStream pour surveiller en temps r&eacute;el l'arriv&eacute;e de liens (Uri).</p></li><li class="list__item" id="-zi5f65_26"><p id="-zi5f65_29">Lorsqu&rsquo;un lien est re&ccedil;u, elle l&rsquo;analyse pour :</p><ul class="list _bullet" id="-zi5f65_30"><li class="list__item" id="-zi5f65_31"><p id="-zi5f65_34">V&eacute;rifier si l'URL contient un chemin valide (overview, etc.).</p></li><li class="list__item" id="-zi5f65_32"><p id="-zi5f65_35">Extraire des param&egrave;tres comme l&rsquo;adresse ou les coordonn&eacute;es GPS.</p></li><li class="list__item" id="-zi5f65_33"><p id="-zi5f65_36">Naviguer automatiquement vers un &eacute;cran sp&eacute;cifique de l'app, comme l&rsquo;&eacute;cran de visualisation d&rsquo;itin&eacute;raire (/overview), avec les donn&eacute;es incluses dans le lien.</p></li></ul></li><li class="list__item" id="-zi5f65_27"><p id="-zi5f65_37">Si aucun chemin sp&eacute;cifique n&rsquo;est d&eacute;tect&eacute;, elle redirige l'utilisateur vers l&rsquo;&eacute;cran principal (HomeScreen).</p></li></ul><div class="code-block" data-lang="dart">
+void _listenToAppLinks() {
+    _appLinks.uriLinkStream.listen((Uri? uri) {
+      if (uri != null) {
+        // Traitez l'URI ici
+        print('App Link reçu : $uri');
+        // Naviguez ou effectuez une action en fonction de l'URI
+        if (uri.pathSegments.isNotEmpty) {
+          final path = uri.pathSegments[0];
+          if (path == 'overview') {
+            // Naviguer vers l'écran de visualisation d'itinéraire (pour que si quelqu'un scanne le QR code, il soit redirigé vers l'écran de visualisation d'itinéraire)
+            Navigator.pushNamed(
+              context,
+              '/overview',
+              arguments: {
+                'address': uri.queryParameters['address'],
+                'coordinates': {
+                  'lat': uri.queryParameters['lat'],
+                  'lon': uri.queryParameters['lon'],
+                },
+              },
+            );
+          } else  {
+
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) =&gt; const HomeScreen(),
+              ),
+            );
+          }
+        }
+      }
+    });
+  }
+</div></section></section><div class="last-modified">09 mai 2025</div><div data-feedback-placeholder="true"></div><div class="navigation-links _bottom"><a href="statistiques.html" class="navigation-links__prev">Statistiques</a><a href="serveur.html" class="navigation-links__next">Serveur</a></div></article><div id="disqus_thread"></div></div></section></main></div><script src="https://resources.jetbrains.com/writerside/apidoc/6.22.0-b776/app.js"></script></body></html>

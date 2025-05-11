@@ -1,0 +1,115 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US" data-preset="contrast" data-primary-color="#307FFF"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="robots" content="noindex"><meta name="built-on" content="2025-05-11T14:09:42.8027672"><title>Navigation | 4PROJ-DOC</title><script type="application/json" id="virtual-toc-data">[{"id":"technologies-utilis-es","level":0,"title":"Technologies utilisées","anchor":"#technologies-utilis-es"},{"id":"fonctionnement","level":0,"title":"Fonctionnement","anchor":"#fonctionnement"},{"id":"recalcul-de-l-itin-raire","level":0,"title":"Recalcul de l\u0027Itinéraire","anchor":"#recalcul-de-l-itin-raire"},{"id":"calcul-de-la-vitesse","level":0,"title":"Calcul de la vitesse","anchor":"#calcul-de-la-vitesse"},{"id":"calcul-du-temps","level":0,"title":"Calcul du temps","anchor":"#calcul-du-temps"}]</script><script type="application/json" id="topic-shortcuts"></script><link href="https://resources.jetbrains.com/writerside/apidoc/6.22.0-b776/app.css" rel="stylesheet"><meta name="msapplication-TileColor" content="#000000"><link rel="apple-touch-icon" sizes="180x180" href="https://jetbrains.com/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="https://jetbrains.com/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="https://jetbrains.com/favicon-16x16.png"><meta name="msapplication-TileImage" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-144x144.png"><meta name="msapplication-square70x70logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-70x70.png"><meta name="msapplication-square150x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-150x150.png"><meta name="msapplication-wide310x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x150.png"><meta name="msapplication-square310x310logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x310.png"><meta name="image" content=""><!-- Open Graph --><meta property="og:title" content="Navigation | 4PROJ-DOC"><meta property="og:description" content=""><meta property="og:image" content=""><meta property="og:site_name" content="4PROJ-DOC Help"><meta property="og:type" content="website"><meta property="og:locale" content="en_US"><meta property="og:url" content="writerside-documentation/navigation.html"><!-- End Open Graph --><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content=""><meta name="twitter:title" content="Navigation | 4PROJ-DOC"><meta name="twitter:description" content=""><meta name="twitter:creator" content=""><meta name="twitter:image:src" content=""><!-- End Twitter Card --><!-- Schema.org WebPage --><script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "@id": "writerside-documentation/navigation.html#webpage",
+    "url": "writerside-documentation/navigation.html",
+    "name": "Navigation | 4PROJ-DOC",
+    "description": "",
+    "image": "",
+    "inLanguage":"en-US"
+}</script><!-- End Schema.org --><!-- Schema.org WebSite --><script type="application/ld+json">{
+    "@type": "WebSite",
+    "@id": "writerside-documentation/#website",
+    "url": "writerside-documentation/",
+    "name": "4PROJ-DOC Help"
+}</script><!-- End Schema.org --></head><body data-id="Navigation" data-main-title="Navigation" data-article-props="{&quot;seeAlsoStyle&quot;:&quot;links&quot;}" data-template="article" data-breadcrumbs="Application-Mobile.md|Application Mobile"><div class="wrapper"><main class="panel _main"><header class="panel__header"><div class="container"><h3>4PROJ-DOC  Help</h3><div class="panel-trigger"></div></div></header><section class="panel__content"><div class="container"><article class="article" data-shortcut-switcher="inactive"><h1 data-toc="Navigation" id="Navigation.md">Navigation</h1><p id="z4eno0d_3"><span class="control" id="z4eno0d_10">La navigation contient</span>:</p><ul class="list _bullet" id="z4eno0d_4"><li class="list__item" id="z4eno0d_11"><p id="z4eno0d_13"><span class="control" id="z4eno0d_14"><a href="géolocalisation.html" id="z4eno0d_15" data-tooltip="geolocator : Pour vérifier l’état des services de localisation, les autorisations, et obtenir la position GPS actuelle de l’utilisateur.">G&eacute;olocalisation</a></span>: Affichage du positionnement.</p></li><li class="list__item" id="z4eno0d_12"><p id="z4eno0d_16"><span class="control" id="z4eno0d_17"><a href="signalement.html" id="z4eno0d_18" data-tooltip="Google Maps Flutter (LatLng)">Incidents</a></span>: Gestion des signalements.</p></li></ul><section class="chapter"><h2 id="technologies-utilis-es" data-toc="technologies-utilis-es">Technologies utilis&eacute;es</h2><ul class="list _bullet" id="z4eno0d_19"><li class="list__item" id="z4eno0d_20"><p id="z4eno0d_23">google_maps_flutter : Affichage et interaction avec Google Maps.</p></li><li class="list__item" id="z4eno0d_21"><p id="z4eno0d_24">geolocator : R&eacute;cup&eacute;ration de la position GPS de l&rsquo;utilisateur.</p></li><li class="list__item" id="z4eno0d_22"><p id="z4eno0d_25">polyline_points : Pour dessiner des polylignes (itin&eacute;raires).</p></li></ul></section><section class="chapter"><h2 id="fonctionnement" data-toc="fonctionnement">Fonctionnement</h2><p id="z4eno0d_26">Ce fichier impl&eacute;mente l&rsquo;&eacute;cran principal de carte. Il permet d&rsquo;afficher une Google Map centr&eacute;e sur la position actuelle de l&rsquo;utilisateur, d&rsquo;y ajouter des marqueurs dynamiquement, et de r&eacute;agir &agrave; certaines actions utilisateur via une interface flottante personnalis&eacute;e. Fonctionnalit&eacute;s cl&eacute;s :</p><ul class="list _bullet" id="z4eno0d_27"><li class="list__item" id="z4eno0d_29"><p id="z4eno0d_34">Initialisation de la position : Lors de l&rsquo;ouverture de la carte, la position GPS actuelle est r&eacute;cup&eacute;r&eacute;e et utilis&eacute;e pour centrer la carte.</p></li><li class="list__item" id="z4eno0d_30"><p id="z4eno0d_35">Google Maps personnalis&eacute; : Affichage de la carte avec des param&egrave;tres personnalis&eacute;s (MapType.terrain, d&eacute;sactivation du zoom controls, etc.).</p></li><li class="list__item" id="z4eno0d_31"><p id="z4eno0d_36">Ajout de marqueurs : Marqueurs d&eacute;finis dans le MapController.</p></li><li class="list__item" id="z4eno0d_32"><p id="z4eno0d_37">Widget d&rsquo;interface flottant (FloatingSearchBar) : Permet de g&eacute;rer des interactions utilisateurs (non encore d&eacute;velopp&eacute;es dans cet extrait).</p></li><li class="list__item" id="z4eno0d_33"><p id="z4eno0d_38">Bouton de centrage : En bas &agrave; droite, permet de recentrer la carte sur la position de l&rsquo;utilisateur.</p></li></ul><div class="code-block" data-lang="dart">
+GoogleMap(
+            initialCameraPosition: CameraPosition(
+              target: _currentPosition != null
+                  ? LatLng(
+                      _currentPosition!.latitude, _currentPosition!.longitude)
+                  : _initialCameraPosition,
+              zoom: _currentZoomLevel,
+            ),
+            padding: EdgeInsets.only(
+              top: MediaQuery.of(context).size.height * 0.4,
+            ),
+            polylines: Set&lt;Polyline&gt;.from(myRouteList),
+            markers: Set&lt;Marker&gt;.of(markerList + iconMarkers + incidentMarkers),
+            zoomControlsEnabled: false,
+            compassEnabled: false,
+            mapType: MapType.normal,
+            style: _mapStyle,
+            onMapCreated: (GoogleMapController controller) {
+              mapController = controller;
+
+              Future.delayed(Duration(milliseconds: 250), () {
+                checkPermissionAndListenLocation();
+              });
+            },
+          ),
+</div></section><section class="chapter"><h2 id="recalcul-de-l-itin-raire" data-toc="recalcul-de-l-itin-raire">Recalcul de l'Itin&eacute;raire</h2><p id="z4eno0d_39">Cette fonction a pour objectif de recalculer la distance restante et d&rsquo;ajuster dynamiquement l&rsquo;itin&eacute;raire lorsque l&rsquo;utilisateur s&rsquo;&eacute;carte du trajet initialement pr&eacute;vu.</p><p id="z4eno0d_40">En faisant:</p><ul class="list _bullet" id="z4eno0d_41"><li class="list__item" id="z4eno0d_43"><p id="z4eno0d_46">D&eacute;tection de la man&oelig;uvre en cours via l&rsquo;index de position.</p></li><li class="list__item" id="z4eno0d_44"><p id="z4eno0d_47">Calcul pr&eacute;cis de la distance restante jusqu'&agrave; la prochaine &eacute;tape.</p></li><li class="list__item" id="z4eno0d_45"><p id="z4eno0d_48">Mise &agrave; jour en temps r&eacute;el de l'affichage pour guider l&rsquo;utilisateur (zoom, distance, rue).</p></li></ul><section class="chapter"><h3 id="code" data-toc="code">Code</h3><div class="code-block" data-lang="dart">
+for (int i = 0; i &lt; maneuvers.length; i++) {
+      int startIndex = (maneuvers[i][&quot;interval&quot;][0] as num).toInt();
+      int endIndex = (maneuvers[i][&quot;interval&quot;][1] as num).toInt();
+
+      if (globalclosestIndex &gt;= startIndex &amp;&amp; globalclosestIndex &lt;= endIndex) {
+        if (_currentManeuver != maneuvers[i]) {
+          _currentManeuver = maneuvers[i];
+          break;
+        }
+        //  Calcul de la distance restante jusqu'à la prochaine instruction (comme on connait l'index de notre position par rapport a la prochaine instruction)
+        int? nextBeginIndex;
+        if (i + 1 &lt; maneuvers.length) {
+          nextBeginIndex = maneuvers[i + 1][&quot;interval&quot;][0];
+        }
+
+        // On somme la distance jusqu’à nextBeginIndex
+        double totalDistance = 0.0;
+        for (int j = globalclosestIndex;
+            j &lt; (nextBeginIndex ?? allLatLngList.length - 1);
+            j++) {
+          if (j &gt;= allLatLngList.length - 1) break;
+          totalDistance += mtk.SphericalUtil.computeDistanceBetween(
+              allLatLngList[j], allLatLngList[j + 1]);
+        }
+        _currentRemainingDistance = formatDistance(totalDistance);
+
+        _currentZoomLevel = getZoomLevel(totalDistance);
+        // Mise à jour du nom de la rue
+        if (_currentManeuver.containsKey(&quot;street_name&quot;)) {
+          _currentStreetName = _currentManeuver[&quot;street_name&quot;];
+        } else {
+          _currentStreetName = &quot;Route inconnue&quot;;
+        }
+        break;
+      }
+    }
+</div></section></section><section class="chapter"><h2 id="calcul-de-la-vitesse" data-toc="calcul-de-la-vitesse">Calcul de la vitesse</h2><p id="z4eno0d_50">Cette fonctionnalit&eacute; permet de suivre en temps r&eacute;el la vitesse de l'utilisateur ainsi que de d&eacute;tecter la limitation de vitesse applicable &agrave; sa position actuelle sur l'itin&eacute;raire.</p><p id="z4eno0d_51">Cela permet de :</p><ul class="list _bullet" id="z4eno0d_52"><li class="list__item" id="z4eno0d_54"><p id="z4eno0d_57">informer l&rsquo;utilisateur en temps r&eacute;el de la limite de vitesse sur la portion actuelle,</p></li><li class="list__item" id="z4eno0d_55"><p id="z4eno0d_58">v&eacute;rifier d&rsquo;&eacute;ventuels d&eacute;passements de vitesse,</p></li><li class="list__item" id="z4eno0d_56"><p id="z4eno0d_59">ajouter des fonctionnalit&eacute;s de s&eacute;curit&eacute; ou d&rsquo;alerte visuelle en cas d&rsquo;exc&egrave;s.</p></li></ul><section class="chapter"><h3 id="code" data-toc="code">Code</h3><div class="code-block" data-lang="dart">
+ // Mise à jour de la limite de vitesse
+    if (speedLimits.isNotEmpty) {
+      for (int i = 0; i &lt; speedLimits.length; i++) {
+        if (globalclosestIndex &gt;= speedLimits[i][0] &amp;&amp;
+            globalclosestIndex &lt;= speedLimits[i][1]) {
+          _currentSpeedLimit =
+              speedLimits[i][2] != null ? &quot;${speedLimits[i][2].toInt()}&quot; : &quot;--&quot;;
+          break;
+        }
+      }
+    }
+    // Mise à jour de la vitesse
+    _calculateSpeed();
+</div></section></section><section class="chapter"><h2 id="calcul-du-temps" data-toc="calcul-du-temps">Calcul du temps</h2><p id="z4eno0d_61">Cette fonctionnalit&eacute; calcule en temps r&eacute;el la distance totale restante jusqu&rsquo;&agrave; la destination ainsi que le temps estim&eacute; d&rsquo;arriv&eacute;e (ETA). Elle s'appuie sur la position actuelle de l'utilisateur dans l'itin&eacute;raire et les donn&eacute;es de navigation re&ccedil;ues.</p><p id="z4eno0d_62">Concr&egrave;tement, le syst&egrave;me :</p><ul class="list _bullet" id="z4eno0d_63"><li class="list__item" id="z4eno0d_65"><p id="z4eno0d_68">Mesure la distance qu&rsquo;il reste &agrave; parcourir &agrave; partir du point actuel jusqu&rsquo;&agrave; la fin de l&rsquo;itin&eacute;raire.</p></li><li class="list__item" id="z4eno0d_66"><p id="z4eno0d_69">Additionne les dur&eacute;es pr&eacute;vues de chaque segment du trajet (ou &quot;man&oelig;uvre&quot;).</p></li><li class="list__item" id="z4eno0d_67"><p id="z4eno0d_70">Estime l&rsquo;heure d&rsquo;arriv&eacute;e en ajoutant ce temps restant &agrave; l&rsquo;heure actuelle.</p></li></ul><section class="chapter"><h3 id="code" data-toc="code">Code</h3><div class="code-block" data-lang="dart">
+ //  Calcul de la distance totale restante jusqu'à l'arrivée
+    double totalRemainingDistance = 0.0;
+    for (int i = globalclosestIndex; i &lt; allLatLngList.length - 1; i++) {
+      totalRemainingDistance += mtk.SphericalUtil.computeDistanceBetween(
+          allLatLngList[i], allLatLngList[i + 1]);
+    }
+    _currentTotalRemainingDistance = formatDistance(totalRemainingDistance);
+
+    // Calcul du temps restant
+
+    int remainingTimeInMilliseconds = 0;
+    for (int i = 0; i &lt; maneuvers.length; i++) {
+      if (maneuvers[i].containsKey(&quot;time&quot;)) {
+        remainingTimeInMilliseconds += (maneuvers[i][&quot;time&quot;] as num).toInt();
+      }
+    }
+    _totalRemainingTime = (remainingTimeInMilliseconds / 60000).round();
+    _estimatedArrivalTime =
+        DateTime.now().toLocal().add(Duration(minutes: _totalRemainingTime));
+
+    if (mounted) setState(() {});
+</div></section></section><div class="last-modified">09 mai 2025</div><div data-feedback-placeholder="true"></div><div class="navigation-links _bottom"><a href="application-mobile.html" class="navigation-links__prev">Application Mobile</a><a href="géolocalisation.html" class="navigation-links__next">G&eacute;olocalisation</a></div></article><div id="disqus_thread"></div></div></section></main></div><script src="https://resources.jetbrains.com/writerside/apidoc/6.22.0-b776/app.js"></script></body></html>

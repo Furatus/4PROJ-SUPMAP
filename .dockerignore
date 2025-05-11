@@ -1,0 +1,23 @@
+# Node modules
+**/node_modules
+**/dist
+**/build
+
+# Logs
+*.log
+**/logs
+
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.idea
+.vscode
+
+# Git
+.git
+api/.gitignore
+
+.pbf

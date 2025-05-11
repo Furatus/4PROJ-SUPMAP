@@ -1,0 +1,128 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US" data-preset="contrast" data-primary-color="#307FFF"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="robots" content="noindex"><meta name="built-on" content="2025-05-11T14:09:42.7932674"><title>Incidents | 4PROJ-DOC</title><script type="application/json" id="virtual-toc-data">[{"id":"technologies-utilis-es","level":0,"title":"Technologies utilisées","anchor":"#technologies-utilis-es"},{"id":"fonctionnement","level":0,"title":"Fonctionnement","anchor":"#fonctionnement"},{"id":"signaler-un-incident","level":0,"title":"Signaler un incident :","anchor":"#signaler-un-incident"},{"id":"confirmer-ou-rejeter-un-incident","level":0,"title":"Confirmer ou rejeter un incident :","anchor":"#confirmer-ou-rejeter-un-incident"},{"id":"r-ception-d-un-incident-via-websocket","level":0,"title":"Réception d’un incident via WebSocket:","anchor":"#r-ception-d-un-incident-via-websocket"}]</script><script type="application/json" id="topic-shortcuts"></script><link href="https://resources.jetbrains.com/writerside/apidoc/6.22.0-b776/app.css" rel="stylesheet"><meta name="msapplication-TileColor" content="#000000"><link rel="apple-touch-icon" sizes="180x180" href="https://jetbrains.com/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="https://jetbrains.com/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="https://jetbrains.com/favicon-16x16.png"><meta name="msapplication-TileImage" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-144x144.png"><meta name="msapplication-square70x70logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-70x70.png"><meta name="msapplication-square150x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-150x150.png"><meta name="msapplication-wide310x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x150.png"><meta name="msapplication-square310x310logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x310.png"><meta name="image" content=""><!-- Open Graph --><meta property="og:title" content="Incidents | 4PROJ-DOC"><meta property="og:description" content=""><meta property="og:image" content=""><meta property="og:site_name" content="4PROJ-DOC Help"><meta property="og:type" content="website"><meta property="og:locale" content="en_US"><meta property="og:url" content="writerside-documentation/signalement.html"><!-- End Open Graph --><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content=""><meta name="twitter:title" content="Incidents | 4PROJ-DOC"><meta name="twitter:description" content=""><meta name="twitter:creator" content=""><meta name="twitter:image:src" content=""><!-- End Twitter Card --><!-- Schema.org WebPage --><script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "@id": "writerside-documentation/signalement.html#webpage",
+    "url": "writerside-documentation/signalement.html",
+    "name": "Incidents | 4PROJ-DOC",
+    "description": "",
+    "image": "",
+    "inLanguage":"en-US"
+}</script><!-- End Schema.org --><!-- Schema.org WebSite --><script type="application/ld+json">{
+    "@type": "WebSite",
+    "@id": "writerside-documentation/#website",
+    "url": "writerside-documentation/",
+    "name": "4PROJ-DOC Help"
+}</script><!-- End Schema.org --></head><body data-id="Signalement" data-main-title="Incidents" data-article-props="{&quot;seeAlsoStyle&quot;:&quot;links&quot;}" data-template="article" data-breadcrumbs="Application-Mobile.md|Application Mobile///Navigation.md|Navigation"><div class="wrapper"><main class="panel _main"><header class="panel__header"><div class="container"><h3>4PROJ-DOC  Help</h3><div class="panel-trigger"></div></div></header><section class="panel__content"><div class="container"><article class="article" data-shortcut-switcher="inactive"><h1 data-toc="Signalement" id="Signalement.md">Incidents</h1><section class="chapter"><h2 id="technologies-utilis-es" data-toc="technologies-utilis-es">Technologies utilis&eacute;es</h2><ul class="list _bullet" id="-ux6d76_8"><li class="list__item" id="-ux6d76_9"><p id="-ux6d76_13">Google Maps Flutter (LatLng)</p></li><li class="list__item" id="-ux6d76_10"><p id="-ux6d76_14">HTTP (http package pour les requ&ecirc;tes REST)</p></li><li class="list__item" id="-ux6d76_11"><p id="-ux6d76_15">Socket.IO (socket_io_client pour les &eacute;v&eacute;nements en temps r&eacute;el)</p></li><li class="list__item" id="-ux6d76_12"><p id="-ux6d76_16">StreamController (pour diffuser les incidents en temps r&eacute;el)</p></li></ul></section><section class="chapter"><h2 id="fonctionnement" data-toc="fonctionnement">Fonctionnement</h2><p id="-ux6d76_17">Le module de gestion des incidents permet aux utilisateurs de signaler, recevoir et confirmer des incidents en temps r&eacute;el sur la carte. Il repose sur une communication entre le client Flutter et un serveur distant via HTTP et WebSocket. Le flux global s&rsquo;articule autour de trois composantes cl&eacute;s :</p><section class="chapter"><h3 id="signalement-d-un-incident" data-toc="signalement-d-un-incident">Signalement d&rsquo;un incident</h3><p id="-ux6d76_21">Lorsqu&rsquo;un utilisateur rep&egrave;re un incident (ex. : embouteillage, accident), il peut cliquer sur un bouton dans l&rsquo;interface de navigation pour ouvrir le widget de s&eacute;lection d&rsquo;incident (IncidentSelectionWidget). Une grille d&rsquo;ic&ocirc;nes lui permet de choisir le type d&rsquo;incident. Une fois un incident s&eacute;lectionn&eacute; :</p><ul class="list _bullet" id="-ux6d76_22"><li class="list__item" id="-ux6d76_23"><p id="-ux6d76_25">Une requ&ecirc;te HTTP POST est envoy&eacute;e au serveur (/incidents/create) avec :</p><ul class="list _bullet" id="-ux6d76_26"><li class="list__item" id="-ux6d76_27"><p id="-ux6d76_29">le type d&rsquo;incident</p></li><li class="list__item" id="-ux6d76_28"><p id="-ux6d76_30">la position GPS actuelle</p></li></ul></li><li class="list__item" id="-ux6d76_24"><p id="-ux6d76_31">Une confirmation est affich&eacute;e &agrave; l&rsquo;utilisateur (via un SnackBar).</p></li></ul></section><section class="chapter"><h3 id="diffusion-en-temps-r-el-des-incidents" data-toc="diffusion-en-temps-r-el-des-incidents">Diffusion en temps r&eacute;el des incidents</h3><p id="-ux6d76_32">Le service d&rsquo;incident (IncidentService) &eacute;tablit une connexion WebSocket s&eacute;curis&eacute;e avec le serveur gr&acirc;ce au token utilisateur. Ce service :</p><ul class="list _bullet" id="-ux6d76_33"><li class="list__item" id="-ux6d76_35"><p id="-ux6d76_38">&eacute;coute les &eacute;v&eacute;nements new_incident &eacute;mis par le backend</p></li><li class="list__item" id="-ux6d76_36"><p id="-ux6d76_39">diffuse les incidents re&ccedil;us via un StreamController</p></li><li class="list__item" id="-ux6d76_37"><p id="-ux6d76_40">peut &ecirc;tre utilis&eacute; par d&rsquo;autres widgets pour r&eacute;agir aux incidents en temps r&eacute;el</p></li></ul><p id="-ux6d76_34">De plus ce n'est que les nouveaux incident qui utilise la technologie websocket. Par ailleurs, ce service envoie p&eacute;riodiquement la position de l&rsquo;utilisateur toutes les 5 minutes, ce qui permet d&rsquo;identifier les utilisateurs proches d&rsquo;un incident.</p></section><section class="chapter"><h3 id="confirmation-ou-infirmation-d-un-incident" data-toc="confirmation-ou-infirmation-d-un-incident">Confirmation ou infirmation d&rsquo;un incident</h3><p id="-ux6d76_41">Lorsqu&rsquo;un incident est d&eacute;tect&eacute; proche de la position de l&rsquo;utilisateur, le serveur envoie une notification en temps r&eacute;el via WebSocket. Cette donn&eacute;e est intercept&eacute;e et transmise &agrave; l&rsquo;UI, qui affiche un widget de confirmation (IncidentConfirmationWidget). Ce widget :</p><ul class="list _bullet" id="-ux6d76_42"><li class="list__item" id="-ux6d76_44"><p id="-ux6d76_47">affiche les d&eacute;tails de l&rsquo;incident avec un compte &agrave; rebours visuel</p></li><li class="list__item" id="-ux6d76_45"><p id="-ux6d76_48">propose deux actions :</p><ul class="list _bullet" id="-ux6d76_49"><li class="list__item" id="-ux6d76_50"><p id="-ux6d76_52">Confirmer l&rsquo;incident (GET /incidents/confirm/:id)</p></li><li class="list__item" id="-ux6d76_51"><p id="-ux6d76_53">Refuser l&rsquo;incident (GET /incidents/refute/:id)</p></li></ul></li><li class="list__item" id="-ux6d76_46"><p id="-ux6d76_54">se ferme automatiquement apr&egrave;s 10 secondes si aucune action n&rsquo;est prise</p></li></ul><p id="-ux6d76_43">Cette validation contribue &agrave; filtrer les faux signalements et &agrave; renforcer la fiabilit&eacute; des informations affich&eacute;es aux autres utilisateurs.</p></section></section><section class="chapter"><h2 id="signaler-un-incident" data-toc="signaler-un-incident">Signaler un incident :</h2><div class="code-block" data-lang="dart">
+void _addIncident(String incidentType, BuildContext context) {
+    log('Incident de type $incidentType au point $incidentLocation');
+
+
+    final token = context.read&lt;UserProvider&gt;().token;
+
+    final response = http.post(
+      Uri.parse('$apiUrl/incidents/create'),
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'Authorization': 'Bearer $token',
+      },
+      body: jsonEncode({
+        'type': incidentType,
+        'location': {
+          'lat': incidentLocation.latitude,
+          'lon': incidentLocation.longitude,
+        },
+      }),
+    );
+    response.then((res) {
+      if (res.statusCode == 201) {
+        // Si l'incident a été ajouté avec succès
+        log('Incident ajouté avec succès');
+        // Afficher un message de confirmation
+        SnackbarInfo.show(context, 'Merci pour votre signalement !', 3,
+            isError: false);
+        Navigator.of(context).pop(); // Fermer le modal
+      } else {
+        // En cas d'erreur
+        log('Erreur lors de l\'ajout de l\'incident: ${res.body}');
+      }
+    }).catchError((error) {
+      log('Erreur de connexion: $error');
+    });
+
+
+  }
+</div></section><section class="chapter"><h2 id="confirmer-ou-rejeter-un-incident" data-toc="confirmer-ou-rejeter-un-incident">Confirmer ou rejeter un incident :</h2><div class="code-block" data-lang="dart">
+Future&lt;void&gt; _confirmIncident(BuildContext context) async {
+    final response = await http.get(
+      Uri.parse('$apiUrl/incidents/confirm/${widget.incidentData['_id']}'),
+      headers: {'Authorization': 'Bearer $token'},
+    );
+    if (response.statusCode == 200) {
+      Navigator.of(context).pop();
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+            content: Text('Erreur lors de la confirmation de l\'incident')),
+      );
+      log('Erreur confirmation incident: ${response.statusCode}');
+      log('Body: ${response.body}');
+    }
+  }
+
+  Future&lt;void&gt; _rejectIncident(BuildContext context) async {
+    final response = await http.get(
+      Uri.parse('$apiUrl/incidents/refute/${widget.incidentData['_id']}'),
+      headers: {'Authorization': 'Bearer $token'},
+    );
+    if (response.statusCode == 200) {
+      Navigator.of(context).pop();
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Erreur lors du rejet de l\'incident')),
+      );
+      log('Erreur rejet incident: ${response.statusCode}');
+      log('Body: ${response.body}');
+    }
+  }
+</div></section><section class="chapter"><h2 id="r-ception-d-un-incident-via-websocket" data-toc="r-ception-d-un-incident-via-websocket">R&eacute;ception d&rsquo;un incident via WebSocket:</h2><div class="code-block" data-lang="dart">
+Future&lt;void&gt; connect(BuildContext context) async {
+    userProvider = Provider.of&lt;UserProvider&gt;(context, listen: false);
+    final String? token = userProvider.token;
+
+    _socket = IO.io(
+      apiUrl,
+      IO.OptionBuilder()
+          .setTransports(['websocket'])
+          /*.enableAutoConnect()*/
+          .setExtraHeaders({'Authorization': 'Bearer $token'})
+          .build(),
+    );
+
+    _socket.onConnect((_) {
+      print('Connecté au serveur WebSocket');
+    });
+
+    _socket.on('hello', (data) {
+      print('Message de bienvenue: $data');
+    });
+
+    _socket.on('new_incident', (data) {
+      _incidentController.add(Map&lt;String, dynamic&gt;.from(data['data'])); // &lt;&lt; push dans le stream
+    });
+
+    _socket.onDisconnect((_) {
+      print('Déconnecté du serveur WebSocket');
+    });
+
+    _socket.onError((error) {
+      print('Erreur WebSocket: $error');
+    });
+  }
+
+  void disconnect() {
+    _incidentController.close(); // Fermer le stream proprement
+    _socket.disconnect();
+  } 
+</div></section><div class="last-modified">09 mai 2025</div><div data-feedback-placeholder="true"></div><div class="navigation-links _bottom"><a href="géolocalisation.html" class="navigation-links__prev">G&eacute;olocalisation</a><a href="paramètres.html" class="navigation-links__next">Param&egrave;tres</a></div></article><div id="disqus_thread"></div></div></section></main></div><script src="https://resources.jetbrains.com/writerside/apidoc/6.22.0-b776/app.js"></script></body></html>

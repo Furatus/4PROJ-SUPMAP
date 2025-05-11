@@ -1,0 +1,70 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US" data-preset="contrast" data-primary-color="#307FFF"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="robots" content="noindex"><meta name="built-on" content="2025-05-11T14:09:42.7932674"><title>Param&egrave;tres | 4PROJ-DOC</title><script type="application/json" id="virtual-toc-data">[{"id":"mode-sombre","level":0,"title":"Mode sombre","anchor":"#mode-sombre"},{"id":"unit-s-de-distance","level":0,"title":"Unités de distance","anchor":"#unit-s-de-distance"},{"id":"viter-les-p-ages","level":0,"title":"Éviter les péages","anchor":"#viter-les-p-ages"}]</script><script type="application/json" id="topic-shortcuts"></script><link href="https://resources.jetbrains.com/writerside/apidoc/6.22.0-b776/app.css" rel="stylesheet"><meta name="msapplication-TileColor" content="#000000"><link rel="apple-touch-icon" sizes="180x180" href="https://jetbrains.com/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="https://jetbrains.com/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="https://jetbrains.com/favicon-16x16.png"><meta name="msapplication-TileImage" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-144x144.png"><meta name="msapplication-square70x70logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-70x70.png"><meta name="msapplication-square150x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-150x150.png"><meta name="msapplication-wide310x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x150.png"><meta name="msapplication-square310x310logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x310.png"><meta name="image" content=""><!-- Open Graph --><meta property="og:title" content="Param&egrave;tres | 4PROJ-DOC"><meta property="og:description" content=""><meta property="og:image" content=""><meta property="og:site_name" content="4PROJ-DOC Help"><meta property="og:type" content="website"><meta property="og:locale" content="en_US"><meta property="og:url" content="writerside-documentation/paramètres.html"><!-- End Open Graph --><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content=""><meta name="twitter:title" content="Param&egrave;tres | 4PROJ-DOC"><meta name="twitter:description" content=""><meta name="twitter:creator" content=""><meta name="twitter:image:src" content=""><!-- End Twitter Card --><!-- Schema.org WebPage --><script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "@id": "writerside-documentation/paramètres.html#webpage",
+    "url": "writerside-documentation/paramètres.html",
+    "name": "Param&egrave;tres | 4PROJ-DOC",
+    "description": "",
+    "image": "",
+    "inLanguage":"en-US"
+}</script><!-- End Schema.org --><!-- Schema.org WebSite --><script type="application/ld+json">{
+    "@type": "WebSite",
+    "@id": "writerside-documentation/#website",
+    "url": "writerside-documentation/",
+    "name": "4PROJ-DOC Help"
+}</script><!-- End Schema.org --></head><body data-id="Paramètres" data-main-title="Paramètres" data-article-props="{&quot;seeAlsoStyle&quot;:&quot;links&quot;}" data-template="article" data-breadcrumbs="Application-Mobile.md|Application Mobile"><div class="wrapper"><main class="panel _main"><header class="panel__header"><div class="container"><h3>4PROJ-DOC  Help</h3><div class="panel-trigger"></div></div></header><section class="panel__content"><div class="container"><article class="article" data-shortcut-switcher="inactive"><h1 data-toc="Paramètres" id="Paramètres.md">Paramètres</h1><section class="chapter"><h2 id="mode-sombre" data-toc="mode-sombre">Mode sombre</h2><p id="jr8ggq_6"><span class="control" id="jr8ggq_9">Description</span>: Permet &agrave; l'utilisateur d'activer ou d&eacute;sactiver le mode sombre de l'application.</p><p id="jr8ggq_7"><span class="control" id="jr8ggq_10">Stockage</span>: Change la valeur du themeNotifier (gestionnaire global de th&egrave;me), et sauvegarde ce choix via saveTheme(...).</p><div class="code-block" data-lang="dart">
+ListTile(
+    leading: const Icon(Icons.dark_mode),
+    title: const Text('Mode sombre'),
+    subtitle: const Text('Activez le mode sombre pour l\'application'),
+    trailing: Switch(
+      value: _darkMode,
+      onChanged: (value) {
+        setState(() {
+          _darkMode = value;
+        });
+        final newTheme = _darkMode ? ThemeMode.dark : ThemeMode.light;
+        themeNotifier.value = newTheme;
+        saveTheme(newTheme);
+      },
+    ),
+)
+</div></section><section class="chapter"><h2 id="unit-s-de-distance" data-toc="unit-s-de-distance">Unit&eacute;s de distance</h2><p id="jr8ggq_11"><span class="control" id="jr8ggq_13">Description</span>: L'utilisateur peut choisir entre les &quot;Kilom&egrave;tres&quot; ou les &quot;Miles&quot; comme unit&eacute; de mesure des distances (utile pour l'affichage sur cartes, navigation...).</p><div class="code-block" data-lang="dart">
+ListTile(
+    leading: const Icon(Icons.straighten),
+    title: const Text('Unités de distance'),
+    subtitle: const Text('Choisissez l\'unité de distance préférée'),
+    trailing: DropdownButton&lt;String&gt;(
+      value: _distanceUnit,
+      items: &lt;String&gt;['Kilomètres', 'Miles'].map((String value) {
+        return DropdownMenuItem&lt;String&gt;(
+          value: value,
+          child: Text(value),
+        );
+      }).toList(),
+      onChanged: (String? newValue) {
+        setState(() {
+          _distanceUnit = newValue!;
+        });
+        // TODO: Appliquer le changement d'unités
+      },
+    ),
+)
+</div></section><section class="chapter"><h2 id="viter-les-p-ages" data-toc="viter-les-p-ages">&Eacute;viter les p&eacute;ages</h2><p id="jr8ggq_14"><span class="control" id="jr8ggq_16">Description</span>: Active ou d&eacute;sactive l&rsquo;option de navigation &eacute;vitant les routes &agrave; p&eacute;age.</p><div class="code-block" data-lang="dart">
+ListTile(
+    leading: const Icon(Icons.toll),
+    title: const Text('Éviter les péages'),
+    subtitle:
+        const Text('Évitez les routes à péage lors de la navigation'),
+    trailing: Switch(
+      value: _avoidTolls,
+      onChanged: (value) {
+        setState(() {
+          _avoidTolls = value;
+        });
+        // TODO: Appliquer la préférence d'évitement des péages
+      },
+    ),
+  )
+</div></section><div class="last-modified">09 mai 2025</div><div data-feedback-placeholder="true"></div><div class="navigation-links _bottom"><a href="signalement.html" class="navigation-links__prev">Incidents</a><a href="authentification.html" class="navigation-links__next">Authentification</a></div></article><div id="disqus_thread"></div></div></section></main></div><script src="https://resources.jetbrains.com/writerside/apidoc/6.22.0-b776/app.js"></script></body></html>

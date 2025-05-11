@@ -1,0 +1,98 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US" data-preset="contrast" data-primary-color="#307FFF"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="robots" content="noindex"><meta name="built-on" content="2025-05-11T14:09:42.7932674"><title>Authentification Web | 4PROJ-DOC</title><script type="application/json" id="virtual-toc-data">[{"id":"technologies-utilis-es","level":0,"title":"Technologies utilisées","anchor":"#technologies-utilis-es"},{"id":"fonctionnement","level":0,"title":"Fonctionnement","anchor":"#fonctionnement"}]</script><script type="application/json" id="topic-shortcuts"></script><link href="https://resources.jetbrains.com/writerside/apidoc/6.22.0-b776/app.css" rel="stylesheet"><meta name="msapplication-TileColor" content="#000000"><link rel="apple-touch-icon" sizes="180x180" href="https://jetbrains.com/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="https://jetbrains.com/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="https://jetbrains.com/favicon-16x16.png"><meta name="msapplication-TileImage" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-144x144.png"><meta name="msapplication-square70x70logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-70x70.png"><meta name="msapplication-square150x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-150x150.png"><meta name="msapplication-wide310x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x150.png"><meta name="msapplication-square310x310logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x310.png"><meta name="image" content=""><!-- Open Graph --><meta property="og:title" content="Authentification Web | 4PROJ-DOC"><meta property="og:description" content=""><meta property="og:image" content=""><meta property="og:site_name" content="4PROJ-DOC Help"><meta property="og:type" content="website"><meta property="og:locale" content="en_US"><meta property="og:url" content="writerside-documentation/authentification-web.html"><!-- End Open Graph --><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content=""><meta name="twitter:title" content="Authentification Web | 4PROJ-DOC"><meta name="twitter:description" content=""><meta name="twitter:creator" content=""><meta name="twitter:image:src" content=""><!-- End Twitter Card --><!-- Schema.org WebPage --><script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "@id": "writerside-documentation/authentification-web.html#webpage",
+    "url": "writerside-documentation/authentification-web.html",
+    "name": "Authentification Web | 4PROJ-DOC",
+    "description": "",
+    "image": "",
+    "inLanguage":"en-US"
+}</script><!-- End Schema.org --><!-- Schema.org WebSite --><script type="application/ld+json">{
+    "@type": "WebSite",
+    "@id": "writerside-documentation/#website",
+    "url": "writerside-documentation/",
+    "name": "4PROJ-DOC Help"
+}</script><!-- End Schema.org --></head><body data-id="Authentification-Web" data-main-title="Authentification Web" data-article-props="{&quot;seeAlsoStyle&quot;:&quot;links&quot;}" data-template="article" data-breadcrumbs="Interface-Web.md|Interface Web"><div class="wrapper"><main class="panel _main"><header class="panel__header"><div class="container"><h3>4PROJ-DOC  Help</h3><div class="panel-trigger"></div></div></header><section class="panel__content"><div class="container"><article class="article" data-shortcut-switcher="inactive"><h1 data-toc="Authentification-Web" id="Authentification-Web.md">Authentification Web</h1><section class="chapter"><h2 id="technologies-utilis-es" data-toc="technologies-utilis-es">Technologies utilis&eacute;es</h2><ul class="list _bullet" id="-5jllc1_5"><li class="list__item" id="-5jllc1_6"><p id="-5jllc1_11">API REST (/api/auth/login, /api/auth/register) : Pour g&eacute;rer l&rsquo;authentification avec le backend.</p></li><li class="list__item" id="-5jllc1_7"><p id="-5jllc1_12">React Router DOM : Pour rediriger l&rsquo;utilisateur apr&egrave;s connexion.</p></li><li class="list__item" id="-5jllc1_8"><p id="-5jllc1_13">JWT (JSON Web Token) : Gestion du token d&rsquo;authentification.</p></li><li class="list__item" id="-5jllc1_9"><p id="-5jllc1_14">LocalStorage : Stockage du token c&ocirc;t&eacute; client.</p></li><li class="list__item" id="-5jllc1_10"><p id="-5jllc1_15">UseAuth : Hook personnalis&eacute; pour g&eacute;rer l&rsquo;&eacute;tat de connexion de l&rsquo;utilisateur (via un context).</p></li></ul></section><section class="chapter"><h2 id="fonctionnement" data-toc="fonctionnement">Fonctionnement</h2><p id="-5jllc1_16">L'authentification se compose de deux vues : Login et Register. Ces composants font partie d&rsquo;un flux d&rsquo;authentification classique :</p><ul class="list _bullet" id="-5jllc1_17"><li class="list__item" id="-5jllc1_21"><p id="-5jllc1_27">L&rsquo;utilisateur entre ses identifiants dans un formulaire.</p></li><li class="list__item" id="-5jllc1_22"><p id="-5jllc1_28">Les donn&eacute;es sont valid&eacute;es.</p></li><li class="list__item" id="-5jllc1_23"><p id="-5jllc1_29">Une requ&ecirc;te HTTP est envoy&eacute;e vers l'API REST du backend.</p></li><li class="list__item" id="-5jllc1_24"><p id="-5jllc1_30">En cas de succ&egrave;s, un token JWT est retourn&eacute; et stock&eacute; en LocalStorage.</p></li><li class="list__item" id="-5jllc1_25"><p id="-5jllc1_31">L'utilisateur est redirig&eacute; vers la page d'accueil.</p></li><li class="list__item" id="-5jllc1_26"><p id="-5jllc1_32">Le token est ensuite envoy&eacute; lors des appels API en utilisant le token stock&eacute; dans le context et dans le LocalStorage.</p></li></ul><div class="code-block" data-lang="javascript">
+const handleLogin = (e) =&gt; {
+    e.preventDefault();
+    console.log('Login attempt with:', email, password);
+    axios.post(`${apiUrl}/auth/login`, {
+        email,
+        password
+    }).then((response) =&gt; {
+        login(response.data.token);
+        navigate('/');
+    }).catch((error) =&gt; {
+        setErrors(error.response.data.error);
+    });
+};
+</div><p id="-5jllc1_19">Connection avec Google :</p><section class="chapter"><h3 id="proc-dure" data-toc="proc-dure">Proc&eacute;dure:</h3><ul class="list _bullet" id="-5jllc1_33"><li class="list__item" id="-5jllc1_35"><p id="-5jllc1_39">L'utilisateur clique sur le bouton de connexion Google et se connecte sur la popup Google.</p></li><li class="list__item" id="-5jllc1_36"><p id="-5jllc1_40">Un token est r&eacute;cup&eacute;r&eacute; , contenant les informations de l'utilisateur, et est envoy&eacute; au backend.</p></li><li class="list__item" id="-5jllc1_37"><p id="-5jllc1_41">Le backend v&eacute;rifie le token avec Google et, si valide, cr&eacute;e un utilisateur dans la base de donn&eacute;es.</p></li><li class="list__item" id="-5jllc1_38"><p id="-5jllc1_42">Le backend retourne un token JWT et les informations de l'utilisateur.</p></li></ul><div class="code-block" data-lang="javascript">
+import {useState} from 'react';
+import {GoogleLogin} from &quot;@react-oauth/google&quot;;
+import {useAuth} from &quot;../hooks/useAuth&quot;;
+import axios from &quot;axios&quot;;
+
+const GoogleAuth = () =&gt; {
+    const apiUrl = import.meta.env.VITE_API_SERVER_URL;
+    const {login} = useAuth();
+    const [successMessage, setSuccessMessage] = useState(false);
+    const [errorMessage, setErrorMessage] = useState(null);
+
+
+    return (
+
+        &lt;div className=&quot;container p-3 rounded flex flex-col items-center justify-center&quot;&gt;
+            {successMessage &amp;&amp;
+                &lt;div
+                    className=&quot;p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400&quot;
+                    role=&quot;alert&quot;&gt;
+                    &lt;span className=&quot;font-medium&quot;&gt;Authentification réussie !&lt;/span&gt; Vous allez être redirigé.
+                &lt;/div&gt;}
+            {errorMessage &amp;&amp;
+                &lt;div className=&quot;p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400&quot;
+                     role=&quot;alert&quot;&gt;
+                    &lt;span className=&quot;font-medium&quot;&gt;Erreur!&lt;/span&gt; Veuillez réessayer.
+                &lt;/div&gt;}
+
+            {!successMessage &amp;&amp; !errorMessage &amp;&amp; &lt;div className=&quot;p-4 mb-4 invisible&quot;&gt;&lt;/div&gt;}
+
+            &lt; GoogleLogin
+
+                onSuccess={(credentialResponse) =&gt; {
+                    const token = credentialResponse.credential;
+                    axios.post(`${apiUrl}/auth/google`, {id_token: token})
+                        .then(response =&gt; {
+                            if (response.status === 200) {
+                                const {token, user} = response.data;
+                                login(token, user);
+                                setTimeout(() =&gt; {
+                                    setSuccessMessage(true);
+                                }, 2000);
+                                setTimeout(() =&gt; {
+                                    window.location.href = '/';
+                                }, 3000);
+                            } else {
+                                setTimeout(() =&gt; {
+                                    setErrorMessage(true);
+                                }, 2000);
+                            }
+
+                        })
+                        .catch((error) =&gt; {
+                            console.error('Error:', error);
+                        });
+                }}
+                onError={() =&gt; {
+                    console.log('Login Failed');
+                }}
+                useOneTap={false}
+            /&gt;
+        &lt;/div&gt;
+
+    );
+};
+
+export default GoogleAuth;
+
+</div></section></section><div class="last-modified">09 mai 2025</div><div data-feedback-placeholder="true"></div><div class="navigation-links _bottom"><a href="signalement-à-proximité.html" class="navigation-links__prev">Signalement &agrave; proximit&eacute;</a><a href="statistiques.html" class="navigation-links__next">Statistiques</a></div></article><div id="disqus_thread"></div></div></section></main></div><script src="https://resources.jetbrains.com/writerside/apidoc/6.22.0-b776/app.js"></script></body></html>

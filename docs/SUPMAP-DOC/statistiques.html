@@ -1,0 +1,99 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US" data-preset="contrast" data-primary-color="#307FFF"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="robots" content="noindex"><meta name="built-on" content="2025-05-11T14:09:42.7982677"><title>Statistiques | 4PROJ-DOC</title><script type="application/json" id="virtual-toc-data">[{"id":"total-des-incidents","level":0,"title":"Total des incidents","anchor":"#total-des-incidents"},{"id":"graphique-par-type-d-incident","level":0,"title":"Graphique par type d\u0027incident","anchor":"#graphique-par-type-d-incident"},{"id":"graphique-par-statut-d-incident","level":0,"title":"Graphique par statut d\u0027incident","anchor":"#graphique-par-statut-d-incident"},{"id":"graphique-des-incidents-par-heure","level":0,"title":"Graphique des incidents par heure","anchor":"#graphique-des-incidents-par-heure"},{"id":"top-5-contributeurs","level":0,"title":"Top 5 contributeurs","anchor":"#top-5-contributeurs"}]</script><script type="application/json" id="topic-shortcuts"></script><link href="https://resources.jetbrains.com/writerside/apidoc/6.22.0-b776/app.css" rel="stylesheet"><meta name="msapplication-TileColor" content="#000000"><link rel="apple-touch-icon" sizes="180x180" href="https://jetbrains.com/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="https://jetbrains.com/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="https://jetbrains.com/favicon-16x16.png"><meta name="msapplication-TileImage" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-144x144.png"><meta name="msapplication-square70x70logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-70x70.png"><meta name="msapplication-square150x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-150x150.png"><meta name="msapplication-wide310x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x150.png"><meta name="msapplication-square310x310logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x310.png"><meta name="image" content=""><!-- Open Graph --><meta property="og:title" content="Statistiques | 4PROJ-DOC"><meta property="og:description" content=""><meta property="og:image" content=""><meta property="og:site_name" content="4PROJ-DOC Help"><meta property="og:type" content="website"><meta property="og:locale" content="en_US"><meta property="og:url" content="writerside-documentation/statistiques.html"><!-- End Open Graph --><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content=""><meta name="twitter:title" content="Statistiques | 4PROJ-DOC"><meta name="twitter:description" content=""><meta name="twitter:creator" content=""><meta name="twitter:image:src" content=""><!-- End Twitter Card --><!-- Schema.org WebPage --><script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "@id": "writerside-documentation/statistiques.html#webpage",
+    "url": "writerside-documentation/statistiques.html",
+    "name": "Statistiques | 4PROJ-DOC",
+    "description": "",
+    "image": "",
+    "inLanguage":"en-US"
+}</script><!-- End Schema.org --><!-- Schema.org WebSite --><script type="application/ld+json">{
+    "@type": "WebSite",
+    "@id": "writerside-documentation/#website",
+    "url": "writerside-documentation/",
+    "name": "4PROJ-DOC Help"
+}</script><!-- End Schema.org --></head><body data-id="Statistiques" data-main-title="Statistiques" data-article-props="{&quot;seeAlsoStyle&quot;:&quot;links&quot;}" data-template="article" data-breadcrumbs="Interface-Web.md|Interface Web"><div class="wrapper"><main class="panel _main"><header class="panel__header"><div class="container"><h3>4PROJ-DOC  Help</h3><div class="panel-trigger"></div></div></header><section class="panel__content"><div class="container"><article class="article" data-shortcut-switcher="inactive"><h1 data-toc="Statistiques" id="Statistiques.md">Statistiques</h1><section class="chapter"><h2 id="total-des-incidents" data-toc="total-des-incidents">Total des incidents</h2><section class="chapter"><h3 id="objectif" data-toc="objectif">Objectif</h3><p id="-jtnbwk_10">Afficher le nombre total d'incidents enregistr&eacute;s.</p></section><section class="chapter"><h3 id="code" data-toc="code">Code</h3><div class="code-block" data-lang="jsx">
+&lt;div className=&quot;bg-white shadow-md rounded-xl p-6 text-center col-span-1 md:col-span-2&quot;&gt;
+  &lt;h2 className=&quot;text-xl font-semibold text-teal-600 mb-2&quot;&gt;Total des incidents&lt;/h2&gt;
+  &lt;p className=&quot;text-3xl font-bold text-gray-800&quot;&gt;{stats.total}&lt;/p&gt;
+&lt;/div&gt;
+</div></section></section><section class="chapter"><h2 id="graphique-par-type-d-incident" data-toc="graphique-par-type-d-incident">Graphique par type d'incident</h2><section class="chapter"><h3 id="objectif" data-toc="objectif">Objectif</h3><p id="-jtnbwk_16">Montrer la r&eacute;partition des types d&rsquo;incidents (ex : Accident, Route barr&eacute;e, Embouteillage&hellip;).</p></section><section class="chapter"><h3 id="type-de-graphique" data-toc="type-de-graphique">Type de graphique</h3><p id="-jtnbwk_17">BarChart (diagramme en barres)</p></section><section class="chapter"><h3 id="donn-es" data-toc="donn-es">Donn&eacute;es</h3><p id="-jtnbwk_18">G&eacute;n&eacute;r&eacute;es avec :</p><div class="code-block" data-lang="javascript">
+const byType = data.reduce((acc, curr) =&gt; {
+  acc[curr.type] = (acc[curr.type] || 0) + 1;
+  return acc;
+}, {});
+</div></section><section class="chapter"><h3 id="code" data-toc="code">Code</h3><div class="code-block" data-lang="jsx">
+&lt;ResponsiveContainer width=&quot;100%&quot; height={250}&gt;
+  &lt;BarChart data={typeData}&gt;
+    &lt;XAxis dataKey=&quot;name&quot; /&gt;
+    &lt;YAxis allowDecimals={false} /&gt;
+    &lt;Tooltip /&gt;
+    &lt;Bar dataKey=&quot;value&quot; fill=&quot;#14b8a6&quot; /&gt;
+  &lt;/BarChart&gt;
+&lt;/ResponsiveContainer&gt;
+</div></section></section><section class="chapter"><h2 id="graphique-par-statut-d-incident" data-toc="graphique-par-statut-d-incident">Graphique par statut d'incident</h2><section class="chapter"><h3 id="objectif" data-toc="objectif">Objectif</h3><p id="-jtnbwk_25">Afficher la r&eacute;partition des incidents selon leur statut (open, confirmed, resolved).</p></section><section class="chapter"><h3 id="type-de-graphique" data-toc="type-de-graphique">Type de graphique</h3><p id="-jtnbwk_26">PieChart (diagramme circulaire)</p></section><section class="chapter"><h3 id="donn-es" data-toc="donn-es">Donn&eacute;es</h3><p id="-jtnbwk_27">G&eacute;n&eacute;r&eacute;es avec :</p><div class="code-block" data-lang="javascript">
+const byStatus = data.reduce((acc, curr) =&gt; {
+  acc[curr.status] = (acc[curr.status] || 0) + 1;
+  return acc;
+}, {});
+</div></section><section class="chapter"><h3 id="code" data-toc="code">Code</h3><div class="code-block" data-lang="jsx">
+&lt;ResponsiveContainer width=&quot;100%&quot; height={250}&gt;
+    &lt;PieChart&gt;
+        &lt;Pie
+            data={statusData}
+            dataKey=&quot;value&quot;
+            nameKey=&quot;name&quot;
+            cx=&quot;50%&quot;
+            cy=&quot;50%&quot;
+            outerRadius={80}
+            fill=&quot;#14b8a6&quot;
+            label
+        &gt;
+            {statusData.map((entry, index) =&gt; (
+                &lt;Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} /&gt;
+            ))}
+        &lt;/Pie&gt;
+        &lt;Legend /&gt;
+        &lt;Tooltip /&gt;
+    &lt;/PieChart&gt;
+&lt;/ResponsiveContainer&gt;
+</div></section></section><section class="chapter"><h2 id="graphique-des-incidents-par-heure" data-toc="graphique-des-incidents-par-heure">Graphique des incidents par heure</h2><section class="chapter"><h3 id="objectif" data-toc="objectif">Objectif</h3><p id="-jtnbwk_34">Visualiser &agrave; quelle heure de la journ&eacute;e les incidents sont le plus signal&eacute;s.</p></section><section class="chapter"><h3 id="type-de-graphique" data-toc="type-de-graphique">Type de graphique</h3><p id="-jtnbwk_35">BarChart</p></section><section class="chapter"><h3 id="donn-es" data-toc="donn-es">Donn&eacute;es</h3><p id="-jtnbwk_36">Cr&eacute;&eacute;es &agrave; partir de l&rsquo;heure de cr&eacute;ation :</p><div class="code-block" data-lang="javascript">
+const hoursMap = Array(24).fill(0);
+data.forEach((incident) =&gt; {
+  const hour = new Date(incident.createdAt).getHours();
+  hoursMap[hour]++;
+});
+const hourlyData = hoursMap.map((count, hour) =&gt; ({
+  hour: `${hour.toString().padStart(2, '0')}h`,
+  count,
+}));
+</div></section><section class="chapter"><h3 id="code" data-toc="code">Code</h3><div class="code-block" data-lang="jsx">
+&lt;ResponsiveContainer width=&quot;100%&quot; height={300}&gt;
+  &lt;BarChart data={stats.hourlyData}&gt;
+    &lt;XAxis dataKey=&quot;hour&quot; /&gt;
+    &lt;YAxis allowDecimals={false} /&gt;
+    &lt;Tooltip /&gt;
+    &lt;Bar dataKey=&quot;count&quot; fill=&quot;#14b8a6&quot; /&gt;
+  &lt;/BarChart&gt;
+&lt;/ResponsiveContainer&gt;
+</div></section></section><section class="chapter"><h2 id="top-5-contributeurs" data-toc="top-5-contributeurs">Top 5 contributeurs</h2><section class="chapter"><h3 id="objectif" data-toc="objectif">Objectif</h3><p id="-jtnbwk_42">Afficher les utilisateurs qui ont signal&eacute; le plus d&rsquo;incidents.</p></section><section class="chapter"><h3 id="donn-es" data-toc="donn-es">Donn&eacute;es</h3><div class="code-block" data-lang="javascript">
+const incidentsByUser = {};
+data.forEach(incident =&gt; {
+    const pseudo = incident.createdBy?.pseudo || 'Inconnu';
+    incidentsByUser[pseudo] = (incidentsByUser[pseudo] || 0) + 1;
+});
+const topUsers = Object.entries(incidentsByUser)
+    .sort((a, b) =&gt; b[1] - a[1])
+    .slice(0, 5)
+    .map(([pseudo, count]) =&gt; ({ pseudo, count }));
+</div></section><section class="chapter"><h3 id="code" data-toc="code">Code</h3><div class="code-block" data-lang="jsx">
+&lt;ul className=&quot;divide-y divide-gray-200&quot;&gt;
+    {stats.topUsers.map((user, index) =&gt; (
+        &lt;li key={user.pseudo} className=&quot;py-2 flex justify-between text-gray-700&quot;&gt;
+            &lt;span className=&quot;font-medium&quot;&gt;{index + 1}. {user.pseudo}&lt;/span&gt;
+            &lt;span&gt;{user.count} incident{user.count &gt; 1 ? 's' : ''}&lt;/span&gt;
+        &lt;/li&gt;
+    ))}
+&lt;/ul&gt;
+</div></section></section><div class="last-modified">09 mai 2025</div><div data-feedback-placeholder="true"></div><div class="navigation-links _bottom"><a href="authentification-web.html" class="navigation-links__prev">Authentification Web</a><a href="partage-de-qr-code.html" class="navigation-links__next">Partage de QR Code</a></div></article><div id="disqus_thread"></div></div></section></main></div><script src="https://resources.jetbrains.com/writerside/apidoc/6.22.0-b776/app.js"></script></body></html>

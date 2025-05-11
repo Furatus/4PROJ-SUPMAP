@@ -1,0 +1,133 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US" data-preset="contrast" data-primary-color="#307FFF"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="robots" content="noindex"><meta name="built-on" content="2025-05-11T14:09:42.7942669"><title>Authentification | 4PROJ-DOC</title><script type="application/json" id="virtual-toc-data">[{"id":"technologies-utilis-es","level":0,"title":"Technologies utilisées","anchor":"#technologies-utilis-es"},{"id":"fonctionnement","level":0,"title":"Fonctionnement","anchor":"#fonctionnement"}]</script><script type="application/json" id="topic-shortcuts"></script><link href="https://resources.jetbrains.com/writerside/apidoc/6.22.0-b776/app.css" rel="stylesheet"><meta name="msapplication-TileColor" content="#000000"><link rel="apple-touch-icon" sizes="180x180" href="https://jetbrains.com/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="https://jetbrains.com/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="https://jetbrains.com/favicon-16x16.png"><meta name="msapplication-TileImage" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-144x144.png"><meta name="msapplication-square70x70logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-70x70.png"><meta name="msapplication-square150x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-150x150.png"><meta name="msapplication-wide310x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x150.png"><meta name="msapplication-square310x310logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x310.png"><meta name="image" content=""><!-- Open Graph --><meta property="og:title" content="Authentification | 4PROJ-DOC"><meta property="og:description" content=""><meta property="og:image" content=""><meta property="og:site_name" content="4PROJ-DOC Help"><meta property="og:type" content="website"><meta property="og:locale" content="en_US"><meta property="og:url" content="writerside-documentation/authentification.html"><!-- End Open Graph --><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content=""><meta name="twitter:title" content="Authentification | 4PROJ-DOC"><meta name="twitter:description" content=""><meta name="twitter:creator" content=""><meta name="twitter:image:src" content=""><!-- End Twitter Card --><!-- Schema.org WebPage --><script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "@id": "writerside-documentation/authentification.html#webpage",
+    "url": "writerside-documentation/authentification.html",
+    "name": "Authentification | 4PROJ-DOC",
+    "description": "",
+    "image": "",
+    "inLanguage":"en-US"
+}</script><!-- End Schema.org --><!-- Schema.org WebSite --><script type="application/ld+json">{
+    "@type": "WebSite",
+    "@id": "writerside-documentation/#website",
+    "url": "writerside-documentation/",
+    "name": "4PROJ-DOC Help"
+}</script><!-- End Schema.org --></head><body data-id="Authentification" data-main-title="Authentification" data-article-props="{&quot;seeAlsoStyle&quot;:&quot;links&quot;}" data-template="article" data-breadcrumbs="Application-Mobile.md|Application Mobile"><div class="wrapper"><main class="panel _main"><header class="panel__header"><div class="container"><h3>4PROJ-DOC  Help</h3><div class="panel-trigger"></div></div></header><section class="panel__content"><div class="container"><article class="article" data-shortcut-switcher="inactive"><h1 data-toc="Authentification" id="Authentification.md">Authentification</h1><section class="chapter"><h2 id="technologies-utilis-es" data-toc="technologies-utilis-es">Technologies utilis&eacute;es</h2><ul class="list _bullet" id="-ygwb5m_5"><li class="list__item" id="-ygwb5m_6"><p id="-ygwb5m_12">http : envoi de requ&ecirc;tes r&eacute;seau pour se connecter au backend.</p></li><li class="list__item" id="-ygwb5m_7"><p id="-ygwb5m_13">flutter_secure_storage : stockage s&eacute;curis&eacute; du token JWT et des donn&eacute;es utilisateur.</p></li><li class="list__item" id="-ygwb5m_8"><p id="-ygwb5m_14">provider : gestion de l&rsquo;&eacute;tat global de l&rsquo;utilisateur connect&eacute;.</p></li><li class="list__item" id="-ygwb5m_9"><p id="-ygwb5m_15">dart:convert : encodage/d&eacute;codage des objets JSON.</p></li><li class="list__item" id="-ygwb5m_10"><p id="-ygwb5m_16">Navigator : navigation apr&egrave;s authentification.</p></li><li class="list__item" id="-ygwb5m_11"><p id="-ygwb5m_17">google_sign_in : pour une connection avec google</p></li></ul></section><section class="chapter"><h2 id="fonctionnement" data-toc="fonctionnement">Fonctionnement</h2><p id="-ygwb5m_18">Connexion via login(email, password) :</p><ul class="list _bullet" id="-ygwb5m_19"><li class="list__item" id="-ygwb5m_25"><p id="-ygwb5m_28">Envoie les identifiants en POST &agrave; l&rsquo;API.</p></li><li class="list__item" id="-ygwb5m_26"><p id="-ygwb5m_29">Si les identifiants sont valides, r&eacute;cup&egrave;re un token JWT et les donn&eacute;es de l'utilisateur.</p></li><li class="list__item" id="-ygwb5m_27"><p id="-ygwb5m_30">Utilise UserProvider pour stocker ces donn&eacute;es et maintenir l'&eacute;tat de session.</p></li></ul><p id="-ygwb5m_20">UserProvider :</p><ul class="list _bullet" id="-ygwb5m_21"><li class="list__item" id="-ygwb5m_31"><p id="-ygwb5m_35">Stocke de fa&ccedil;on s&eacute;curis&eacute;e les donn&eacute;es utilisateur et le token.</p></li><li class="list__item" id="-ygwb5m_32"><p id="-ygwb5m_36">Charge automatiquement ces donn&eacute;es au d&eacute;marrage.</p></li><li class="list__item" id="-ygwb5m_33"><p id="-ygwb5m_37">V&eacute;rifie la validit&eacute; du token JWT (date d&rsquo;expiration incluse).</p></li><li class="list__item" id="-ygwb5m_34"><p id="-ygwb5m_38">Fournit des getters utiles pour acc&eacute;der au nom, email, r&ocirc;le, etc.</p></li></ul><div class="code-block" data-lang="dart">
+class UserProvider extends ChangeNotifier {
+  final FlutterSecureStorage _storage = const FlutterSecureStorage();
+  Map&lt;String, dynamic&gt;? _user;
+  String? _token;
+
+  Map&lt;String, dynamic&gt;? get user =&gt; _user;
+
+  bool get isLogged =&gt; _user != null;
+
+  String? get userId =&gt; _user?['id'];
+
+  String? get userName =&gt; _user?['pseudo'];
+
+  String? get userEmail =&gt; _user?['email'];
+
+  String? get userRole =&gt; _user?['role'];
+
+  String? get userPicture =&gt; _user?['picture'];
+
+  String? get token =&gt; _token;
+
+  UserProvider() {
+    _loadUserFromStorage(); // auto init
+    _loadTokenFromStorage(); // auto init
+    _checkTokenValidity();
+  }
+
+  Future&lt;void&gt; _checkTokenValidity() async {
+    if (_token == null) return;
+
+    try {
+      final parts = _token!.split('.');
+      if (parts.length != 3) {
+        removeUser(); // Token invalide
+        return;
+      }
+
+      final payload = jsonDecode(
+          utf8.decode(base64Url.decode(base64Url.normalize(parts[1]))));
+      final exp = payload['exp'] as int?;
+      if (exp == null || DateTime.now().millisecondsSinceEpoch / 1000 &gt; exp) {
+        removeUser(); // Token expiré
+      }
+    } catch (e) {
+      removeUser(); // Erreur lors de la vérification
+    }
+  }
+
+  Future&lt;void&gt; setUser(Map&lt;String, dynamic&gt; user) async {
+    _user = user;
+    await _storage.write(key: 'user', value: jsonEncode(user));
+    notifyListeners();
+  }
+
+  void removeUser() async {
+    _user = null;
+    await _storage.delete(key: 'user');
+    await _storage.delete(key: 'token');
+    notifyListeners();
+  }
+
+  Future&lt;void&gt; _loadUserFromStorage() async {
+    final userJson = await _storage.read(key: 'user');
+    if (userJson != null) {
+      _user = jsonDecode(userJson);
+      notifyListeners();
+    }
+  }
+
+  Future&lt;void&gt; setToken(String token) async {
+    _token = token;
+    await _storage.write(key: 'token', value: token);
+    notifyListeners();
+  }
+
+  Future&lt;void&gt; _loadTokenFromStorage() async {
+    final token = await _storage.read(key: 'token');
+    if (token != null) {
+      _token = token;
+      notifyListeners();
+    }
+  }
+}
+</div><p id="-ygwb5m_23">Voici la connection avec google</p><div class="code-block" data-lang="dart">
+Future&lt;void&gt; _handleGoogleSignIn(BuildContext context) async {
+try {
+final GoogleSignInAccount? googleAccount = await _googleSignIn.signIn();
+if (googleAccount == null) return;
+final GoogleSignInAuthentication googleAuthentication =
+await googleAccount.authentication;
+final idToken = googleAuthentication.idToken;
+
+      // Envoi du token à ton backend
+      final response = await http.post(
+        Uri.parse('$apiUrl/auth/google'),
+        headers: {'Content-Type': 'application/json'},
+        body: jsonEncode({'id_token': idToken}),
+      );
+
+      if (response.statusCode == 200) {
+        final token = jsonDecode(response.body)['token'];
+        userProvider.setToken(token);
+
+        final user = jsonDecode(response.body)['user'];
+        userProvider.setUser(user);
+
+        Navigator.pushNamed(context, '/');
+        return jsonDecode(response.body);
+      } else {
+        print('Erreur de connexion backend : ${response.statusCode}');
+        print('Erreur de connexion backend : ${response.body}');
+      }
+    } catch (error) {
+      print('Erreur Google Sign-In : $error');
+    }
+}
+</div></section><div class="last-modified">09 mai 2025</div><div data-feedback-placeholder="true"></div><div class="navigation-links _bottom"><a href="paramètres.html" class="navigation-links__prev">Param&egrave;tres</a><a href="interface-web.html" class="navigation-links__next">Interface Web</a></div></article><div id="disqus_thread"></div></div></section></main></div><script src="https://resources.jetbrains.com/writerside/apidoc/6.22.0-b776/app.js"></script></body></html>

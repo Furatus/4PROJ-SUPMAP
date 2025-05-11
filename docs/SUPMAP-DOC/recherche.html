@@ -1,0 +1,77 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US" data-preset="contrast" data-primary-color="#307FFF"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="robots" content="noindex"><meta name="built-on" content="2025-05-11T14:09:42.7937672"><title>Recherche | 4PROJ-DOC</title><script type="application/json" id="virtual-toc-data">[{"id":"technologies-utilis-es","level":0,"title":"Technologies utilisées","anchor":"#technologies-utilis-es"},{"id":"fonctionnement","level":0,"title":"Fonctionnement","anchor":"#fonctionnement"}]</script><script type="application/json" id="topic-shortcuts"></script><link href="https://resources.jetbrains.com/writerside/apidoc/6.22.0-b776/app.css" rel="stylesheet"><meta name="msapplication-TileColor" content="#000000"><link rel="apple-touch-icon" sizes="180x180" href="https://jetbrains.com/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="https://jetbrains.com/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="https://jetbrains.com/favicon-16x16.png"><meta name="msapplication-TileImage" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-144x144.png"><meta name="msapplication-square70x70logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-70x70.png"><meta name="msapplication-square150x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-150x150.png"><meta name="msapplication-wide310x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x150.png"><meta name="msapplication-square310x310logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x310.png"><meta name="image" content=""><!-- Open Graph --><meta property="og:title" content="Recherche | 4PROJ-DOC"><meta property="og:description" content=""><meta property="og:image" content=""><meta property="og:site_name" content="4PROJ-DOC Help"><meta property="og:type" content="website"><meta property="og:locale" content="en_US"><meta property="og:url" content="writerside-documentation/recherche.html"><!-- End Open Graph --><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content=""><meta name="twitter:title" content="Recherche | 4PROJ-DOC"><meta name="twitter:description" content=""><meta name="twitter:creator" content=""><meta name="twitter:image:src" content=""><!-- End Twitter Card --><!-- Schema.org WebPage --><script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "@id": "writerside-documentation/recherche.html#webpage",
+    "url": "writerside-documentation/recherche.html",
+    "name": "Recherche | 4PROJ-DOC",
+    "description": "",
+    "image": "",
+    "inLanguage":"en-US"
+}</script><!-- End Schema.org --><!-- Schema.org WebSite --><script type="application/ld+json">{
+    "@type": "WebSite",
+    "@id": "writerside-documentation/#website",
+    "url": "writerside-documentation/",
+    "name": "4PROJ-DOC Help"
+}</script><!-- End Schema.org --></head><body data-id="Recherche" data-main-title="Recherche" data-article-props="{&quot;seeAlsoStyle&quot;:&quot;links&quot;}" data-template="article" data-breadcrumbs="Interface-Web.md|Interface Web"><div class="wrapper"><main class="panel _main"><header class="panel__header"><div class="container"><h3>4PROJ-DOC  Help</h3><div class="panel-trigger"></div></div></header><section class="panel__content"><div class="container"><article class="article" data-shortcut-switcher="inactive"><h1 data-toc="Recherche" id="Recherche.md">Recherche</h1><section class="chapter"><h2 id="technologies-utilis-es" data-toc="technologies-utilis-es">Technologies utilis&eacute;es</h2><ul class="list _bullet" id="z9g07ri_5"><li class="list__item" id="z9g07ri_6"><p id="z9g07ri_10">Tailwind CSS : Pour le style responsive et rapide.</p></li><li class="list__item" id="z9g07ri_7"><p id="z9g07ri_11">React Hooks (useState, useEffect) : Gestion de l&rsquo;&eacute;tat local (champ de saisie, r&eacute;sultats, etc.).</p></li><li class="list__item" id="z9g07ri_8"><p id="z9g07ri_12">@vis.gl/react-google-maps : Int&eacute;gration de Google Maps pour afficher les trajets.</p></li><li class="list__item" id="z9g07ri_9"><p id="z9g07ri_13">@googlemaps/polyline-codec : D&eacute;codage des polylignes pour afficher des itin&eacute;raires.</p></li></ul></section><section class="chapter"><h2 id="fonctionnement" data-toc="fonctionnement">Fonctionnement</h2><p id="z9g07ri_14">La barre de recherche permet &agrave; l&rsquo;utilisateur de d&eacute;finir un point de d&eacute;part et un point d&rsquo;arriv&eacute;e sur la carte. Une fois la recherche effectu&eacute;e, l&rsquo;utilisateur peut choisir parmi plusieurs itin&eacute;raires propos&eacute;s. Les points de d&eacute;part et d&rsquo;arriv&eacute;e sont affich&eacute;s sur la carte avec des marqueurs personnalis&eacute;s.</p><ul class="list _bullet" id="z9g07ri_15"><li class="list__item" id="z9g07ri_18"><p id="z9g07ri_22">L'utilisateur peut choisir d'&eacute;viter les p&eacute;ages.</p></li><li class="list__item" id="z9g07ri_19"><p id="z9g07ri_23">La recherche est effectu&eacute;e en envoyant une requ&ecirc;te au backend avec les coordonn&eacute;es de d&eacute;part et d&rsquo;arriv&eacute;e et les param&egrave;tres de recherche, qui surcharge avec les incidents, envoie la requete a GraphHopper et renvoie les r&eacute;sultats au frontend.</p></li><li class="list__item" id="z9g07ri_20"><p id="z9g07ri_24">L&rsquo;itin&eacute;raire est r&eacute;cup&eacute;r&eacute; sous forme de polyligne encod&eacute;e.</p></li><li class="list__item" id="z9g07ri_21"><p id="z9g07ri_25">La polyligne est d&eacute;cod&eacute;e avec @googlemaps/polyline-codec puis trac&eacute;e sur la carte.</p></li></ul><p id="z9g07ri_16">Ce m&eacute;canisme permet l'affichage fluide des itin&eacute;raires.</p><div class="code-block" data-lang="dart">
+ // Créer des icônes SVG pour le départ et l'arrivée avec des couleurs différentes
+    const startIconSVG = ReactDOMServer.renderToString(&lt;MapPin color=&quot;green&quot;/&gt;);
+    const endIconSVG = ReactDOMServer.renderToString(&lt;MapPin color=&quot;red&quot;/&gt;);
+
+    // Créer des objets Blob à partir des chaînes SVG
+    const startSvgBlob = new Blob([startIconSVG], {type: 'image/svg+xml'});
+    const endSvgBlob = new Blob([endIconSVG], {type: 'image/svg+xml'});
+    const startSvgUrl = URL.createObjectURL(startSvgBlob);
+    const endSvgUrl = URL.createObjectURL(endSvgBlob);
+
+    useEffect(() =&gt; {
+        if (itinerarys.length &gt; 0) {
+            // Supprimer les polylines existantes de la carte
+            polylines.current.forEach(polyline =&gt; polyline.setMap(null));
+            // Afficher le tracé de tous les itinéraires
+            itinerarys.forEach((itinerary) =&gt; {
+                const encodedShape = itinerary.points;
+                const decodedCoordinates = decode(encodedShape, 5);
+                const path = decodedCoordinates.map(coord =&gt; ({lat: coord[0], lng: coord[1]}));
+                const weightShape = currentItinerary === itinerary ? 7 : 6;
+                const opacityShape = currentItinerary === itinerary ? 1 : 0.5;
+
+                const polyline = new window.google.maps.Polyline({
+                    path: path,
+                    strokeColor: '#0000FF', // Bleu
+                    strokeOpacity: opacityShape,
+                    strokeWeight: weightShape,
+                    map: map,
+                });
+                // Gestionnaire d'événements pour le clic sur la polyline
+                polyline.addListener('click', () =&gt; {
+                    setCurrentItinerary(itinerary);
+                });
+
+                // Store the polyline in the ref
+                polylines.current.push(polyline);
+            });
+            // Afficher les marqueurs de départ et d'arrivée
+            const startMarker = new window.google.maps.Marker({
+                position: {lat: startCoordinates.lat, lng: startCoordinates.lon},
+                map: map,
+                icon: {
+                    url: startSvgUrl,
+                    scaledSize: new window.google.maps.Size(30, 30),
+                },
+                title: 'Départ',
+            });
+            const endMarker = new window.google.maps.Marker({
+                position: {lat: endCoordinates.lat, lng: endCoordinates.lon},
+                map: map,
+                icon: {
+                    url: endSvgUrl,
+                    scaledSize: new window.google.maps.Size(30, 30),
+                },
+                title: 'Arrivée',
+            });
+            markers.current.push(startMarker);
+            markers.current.push(endMarker);
+        }
+    }, [itinerarys, currentItinerary, map]);
+</div></section><div class="last-modified">09 mai 2025</div><div data-feedback-placeholder="true"></div><div class="navigation-links _bottom"><a href="carte-interactive.html" class="navigation-links__prev">Carte interactive</a><a href="signalement-à-proximité.html" class="navigation-links__next">Signalement &agrave; proximit&eacute;</a></div></article><div id="disqus_thread"></div></div></section></main></div><script src="https://resources.jetbrains.com/writerside/apidoc/6.22.0-b776/app.js"></script></body></html>

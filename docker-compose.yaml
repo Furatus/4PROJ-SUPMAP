@@ -1,0 +1,79 @@
+services:
+  graphhopper:
+    build:
+      context: ./graphhopper
+      dockerfile: Dockerfile
+    ports:
+      - "8989:8989"
+    volumes:
+      - ./graphhopper/data:/graphhopper/data
+      - supmap-graphhopper-model:/data
+    networks:
+      - supmap-network
+    deploy:
+      resources:
+        limits:
+          memory: 8G
+          cpus: "4"
+
+
+  supmap-db:
+    image: mongo:latest
+    container_name: supmap-db
+    ports:
+      - "27017:27017"
+    volumes:
+      - supmap-data:/data/db
+    environment:
+      MONGO_INITDB_DATABASE: supmap-db
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_ROOT_USER}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_ROOT_PASSWORD}
+    networks:
+      - supmap-network
+    restart: always
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh mongodb://${MONGO_ROOT_USER}:${MONGO_ROOT_PASSWORD}@localhost:27017/ --quiet
+      interval: 15s
+      timeout: 5s
+      retries: 5
+
+  supmap-api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+      - "3080:3080"
+    depends_on:
+      supmap-db:
+        condition: service_healthy
+
+    networks:
+      - supmap-network
+
+  supmap-web:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    ports:
+      - "443:443"
+    depends_on:
+      - supmap-api
+
+    networks:
+      - supmap-network
+  
+  supmap-docs:
+    build:
+      context: ./docs
+      dockerfile: Dockerfile
+    ports:
+      - "4000:4000"
+
+volumes:
+  supmap-data:
+    driver: local
+  supmap-graphhopper-model:
+    driver: local
+networks:
+  supmap-network:

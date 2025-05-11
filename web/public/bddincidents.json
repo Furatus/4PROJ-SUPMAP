@@ -1,0 +1,1235 @@
+[
+  {
+    "type": "bouchon",
+    "severity": 3,
+    "location": {
+      "lat": 48.8566,
+      "lon": 2.3522
+    },
+    "dateAdded": "2023-08-01T08:15:00Z"
+  },
+  {
+    "type": "police",
+    "severity": 5,
+    "location": {
+      "lat": 43.6108,
+      "lon": 3.8767
+    },
+    "dateAdded": "2023-08-01T10:30:00Z"
+  },
+  {
+    "type": "routebarree",
+    "severity": 2,
+    "location": {
+      "lat": 45.7640,
+      "lon": 4.8357
+    },
+    "dateAdded": "2023-08-02T07:45:00Z"
+  },
+  {
+    "type": "objet",
+    "severity": 1,
+    "location": {
+      "lat": 47.2184,
+      "lon": -1.5536
+    },
+    "dateAdded": "2023-08-02T12:10:00Z"
+  },
+  {
+    "type": "bouchon",
+    "severity": 4,
+    "location": {
+      "lat": 43.2965,
+      "lon": 5.3698
+    },
+    "dateAdded": "2023-08-02T18:20:00Z"
+  },
+  {
+    "type": "police",
+    "severity": 2,
+    "location": {
+      "lat": 44.8378,
+      "lon": -0.5792
+    },
+    "dateAdded": "2023-08-03T09:00:00Z"
+  },
+  {
+    "type": "routebarree",
+    "severity": 5,
+    "location": {
+      "lat": 50.6292,
+      "lon": 3.0573
+    },
+    "dateAdded": "2023-08-03T11:15:00Z"
+  },
+  {
+    "type": "objet",
+    "severity": 3,
+    "location": {
+      "lat": 49.2583,
+      "lon": 4.0317
+    },
+    "dateAdded": "2023-08-03T14:50:00Z"
+  },
+  {
+    "type": "bouchon",
+    "severity": 5,
+    "location": {
+      "lat": 42.6987,
+      "lon": 9.4508
+    },
+    "dateAdded": "2023-08-04T06:25:00Z"
+  },
+  {
+    "type": "police",
+    "severity": 1,
+    "location": {
+      "lat": 45.8992,
+      "lon": 6.1294
+    },
+    "dateAdded": "2023-08-04T12:05:00Z"
+  },
+  {
+    "type": "routebarree",
+    "severity": 4,
+    "location": {
+      "lat": 43.0923,
+      "lon": -0.0466
+    },
+    "dateAdded": "2023-08-04T17:30:00Z"
+  },
+  {
+    "type": "objet",
+    "severity": 2,
+    "location": {
+      "lat": 47.2800,
+      "lon": 5.0933
+    },
+    "dateAdded": "2023-08-05T09:00:00Z"
+  },
+  {
+    "type": "bouchon",
+    "severity": 3,
+    "location": {
+      "lat": 44.9288,
+      "lon": 4.8880
+    },
+    "dateAdded": "2023-08-05T15:45:00Z"
+  },
+  {
+    "type": "police",
+    "severity": 2,
+    "location": {
+      "lat": 50.3705,
+      "lon": 2.7759
+    },
+    "dateAdded": "2023-08-05T19:20:00Z"
+  },
+  {
+    "type": "routebarree",
+    "severity": 1,
+    "location": {
+      "lat": 49.8942,
+      "lon": 2.2957
+    },
+    "dateAdded": "2023-08-06T08:05:00Z"
+  },
+  {
+    "type": "objet",
+    "severity": 5,
+    "location": {
+      "lat": 48.5839,
+      "lon": 7.7455
+    },
+    "dateAdded": "2023-08-06T13:10:00Z"
+  },
+  {
+    "type": "bouchon",
+    "severity": 2,
+    "location": {
+      "lat": 46.7694,
+      "lon": 4.8539
+    },
+    "dateAdded": "2023-08-06T16:40:00Z"
+  },
+  {
+    "type": "police",
+    "severity": 3,
+    "location": {
+      "lat": 43.5515,
+      "lon": 7.0160
+    },
+    "dateAdded": "2023-08-07T06:10:00Z"
+  },
+  {
+    "type": "routebarree",
+    "severity": 5,
+    "location": {
+      "lat": 47.3220,
+      "lon": 5.0415
+    },
+    "dateAdded": "2023-08-07T11:20:00Z"
+  },
+  {
+    "type": "objet",
+    "severity": 4,
+    "location": {
+      "lat": 44.5615,
+      "lon": 6.0789
+    },
+    "dateAdded": "2023-08-07T17:55:00Z"
+  },
+  {
+    "type": "bouchon",
+    "severity": 5,
+    "location": {
+      "lat": 43.5008,
+      "lon": 1.6310
+    },
+    "dateAdded": "2023-08-08T08:25:00Z"
+  },
+  {
+    "type": "police",
+    "severity": 4,
+    "location": {
+      "lat": 45.7579,
+      "lon": 4.8323
+    },
+    "dateAdded": "2023-08-08T12:15:00Z"
+  },
+  {
+    "type": "routebarree",
+    "severity": 3,
+    "location": {
+      "lat": 47.2378,
+      "lon": -1.6300
+    },
+    "dateAdded": "2023-08-08T19:40:00Z"
+  },
+  {
+    "type": "objet",
+    "severity": 1,
+    "location": {
+      "lat": 45.1715,
+      "lon": 1.5270
+    },
+    "dateAdded": "2023-08-09T07:00:00Z"
+  },
+  {
+    "type": "bouchon",
+    "severity": 1,
+    "location": {
+      "lat": 46.3116,
+      "lon": 2.6029
+    },
+    "dateAdded": "2023-08-09T10:10:00Z"
+  },
+  {
+    "type": "police",
+    "severity": 5,
+    "location": {
+      "lat": 48.0128,
+      "lon": 0.1996
+    },
+    "dateAdded": "2023-08-09T18:50:00Z"
+  },
+  {
+    "type": "routebarree",
+    "severity": 3,
+    "location": {
+      "lat": 49.4432,
+      "lon": 1.0993
+    },
+    "dateAdded": "2023-08-10T08:45:00Z"
+  },
+  {
+    "type": "objet",
+    "severity": 2,
+    "location": {
+      "lat": 47.6631,
+      "lon": -2.7580
+    },
+    "dateAdded": "2023-08-10T15:25:00Z"
+  },
+  {
+    "type": "bouchon",
+    "severity": 4,
+    "location": {
+      "lat": 45.0428,
+      "lon": 1.1450
+    },
+    "dateAdded": "2023-08-11T08:00:00Z"
+  },
+  {
+    "type": "police",
+    "severity": 3,
+    "location": {
+      "lat": 50.6784,
+      "lon": 2.6420
+    },
+    "dateAdded": "2023-08-11T10:15:00Z"
+  },
+  {
+    "type": "routebarree",
+    "severity": 1,
+    "location": {
+      "lat": 46.2044,
+      "lon": 5.2258
+    },
+    "dateAdded": "2023-08-11T16:50:00Z"
+  },
+  {
+    "type": "objet",
+    "severity": 5,
+    "location": {
+      "lat": 47.7508,
+      "lon": 7.3359
+    },
+    "dateAdded": "2023-08-12T09:25:00Z"
+  },
+  {
+    "type": "bouchon",
+    "severity": 1,
+    "location": {
+      "lat": 45.6086,
+      "lon": 3.0880
+    },
+    "dateAdded": "2023-08-12T11:55:00Z"
+  },
+  {
+    "type": "police",
+    "severity": 2,
+    "location": {
+      "lat": 44.8076,
+      "lon": -0.6034
+    },
+    "dateAdded": "2023-08-12T14:40:00Z"
+  },
+  {
+    "type": "routebarree",
+    "severity": 4,
+    "location": {
+      "lat": 44.0120,
+      "lon": 1.3632
+    },
+    "dateAdded": "2023-08-13T07:10:00Z"
+  },
+  {
+    "type": "objet",
+    "severity": 3,
+    "location": {
+      "lat": 45.8467,
+      "lon": 1.2611
+    },
+    "dateAdded": "2023-08-13T15:50:00Z"
+  },
+  {
+    "type": "bouchon",
+    "severity": 2,
+    "location": {
+      "lat": 48.2667,
+      "lon": 4.0667
+    },
+    "dateAdded": "2023-08-13T19:30:00Z"
+  },
+  {
+    "type": "police",
+    "severity": 5,
+    "location": {
+      "lat": 50.1103,
+      "lon": 1.8354
+    },
+    "dateAdded": "2023-08-14T08:05:00Z"
+  },
+  {
+    "type": "routebarree",
+    "severity": 2,
+    "location": {
+      "lat": 48.6800,
+      "lon": 6.1759
+    },
+    "dateAdded": "2023-08-14T11:20:00Z"
+  },
+  {
+    "type": "objet",
+    "severity": 4,
+    "location": {
+      "lat": 47.1195,
+      "lon": -1.2125
+    },
+    "dateAdded": "2023-08-14T17:45:00Z"
+  },
+  {
+    "type": "bouchon",
+    "severity": 1,
+    "location": {
+      "lat": 43.5528,
+      "lon": 7.0174
+    },
+    "dateAdded": "2023-08-15T07:00:00Z"
+  },
+  {
+    "type": "police",
+    "severity": 3,
+    "location": {
+      "lat": 49.2583,
+      "lon": 4.0317
+    },
+    "dateAdded": "2023-08-15T13:20:00Z"
+  },
+  {
+    "type": "routebarree",
+    "severity": 4,
+    "location": {
+      "lat": 46.2159,
+      "lon": 0.7219
+    },
+    "dateAdded": "2023-08-15T18:35:00Z"
+  },
+  {
+    "type": "objet",
+    "severity": 5,
+    "location": {
+      "lat": 44.3492,
+      "lon": 2.5750
+    },
+    "dateAdded": "2023-08-16T10:55:00Z"
+  },
+  {
+    "type": "bouchon",
+    "severity": 3,
+    "location": {
+      "lat": 49.0356,
+      "lon": 2.0631
+    },
+    "dateAdded": "2023-08-16T14:10:00Z"
+  },
+  {
+    "type": "police",
+    "severity": 1,
+    "location": {
+      "lat": 44.5580,
+      "lon": 6.0780
+    },
+    "dateAdded": "2023-08-16T19:30:00Z"
+  },
+  {
+    "type": "routebarree",
+    "severity": 2,
+    "location": {
+      "lat": 48.1022,
+      "lon": -1.6755
+    },
+    "dateAdded": "2023-08-17T07:45:00Z"
+  },
+  {
+    "type": "objet",
+    "severity": 3,
+    "location": {
+      "lat": 45.0073,
+      "lon": 2.3060
+    },
+    "dateAdded": "2023-08-17T13:05:00Z"
+  },
+  {
+    "type": "bouchon",
+    "severity": 4,
+    "location": {
+      "lat": 49.7751,
+      "lon": 0.3786
+    },
+    "dateAdded": "2023-08-17T20:50:00Z"
+  },
+  {
+    "type": "accident",
+    "severity": 5,
+    "location": {
+      "lat": 48.8566,
+      "lon": 2.3522
+    },
+    "dateAdded": "2023-08-18T08:15:00Z"
+  },
+  {
+    "type": "routebarree",
+    "severity": 3,
+    "location": {
+      "lat": 48.8566,
+      "lon": 2.3522
+    },
+    "dateAdded": "2023-08-18T10:00:00Z"
+  },
+  {
+    "type": "bouchon",
+    "severity": 2,
+    "location": {
+      "lat": 45.7640,
+      "lon": 4.8357
+    },
+    "dateAdded": "2023-08-18T12:00:00Z"
+  },
+  {
+    "type": "accident",
+    "severity": 4,
+    "location": {
+      "lat": 43.6108,
+      "lon": 3.8767
+    },
+    "dateAdded": "2023-08-18T14:00:00Z"
+  },
+  {
+    "type": "travaux",
+    "severity": 1,
+    "location": {
+      "lat": 47.2184,
+      "lon": -1.5536
+    },
+    "dateAdded": "2023-08-18T16:00:00Z"
+  },
+  {
+    "type": "police",
+    "severity": 5,
+    "location": {
+      "lat": 44.8378,
+      "lon": -0.5792
+    },
+    "dateAdded": "2023-08-18T18:00:00Z"
+  },
+  {
+    "type": "routebarree",
+    "severity": 2,
+    "location": {
+      "lat": 50.6292,
+      "lon": 3.0573
+    },
+    "dateAdded": "2023-08-18T20:00:00Z"
+  },
+  {
+    "type": "bouchon",
+    "severity": 3,
+    "location": {
+      "lat": 43.2965,
+      "lon": 5.3698
+    },
+    "dateAdded": "2023-08-19T08:00:00Z"
+  },
+  {
+    "type": "accident",
+    "severity": 5,
+    "location": {
+      "lat": 45.7640,
+      "lon": 4.8357
+    },
+    "dateAdded": "2023-08-19T10:00:00Z"
+  },
+  {
+    "type": "travaux",
+    "severity": 4,
+    "location": {
+      "lat": 43.6108,
+      "lon": 3.8767
+    },
+    "dateAdded": "2023-08-19T12:00:00Z"
+  },
+  {
+    "type": "police",
+    "severity": 2,
+    "location": {
+      "lat": 47.2184,
+      "lon": -1.5536
+    },
+    "dateAdded": "2023-08-19T14:00:00Z"
+  },
+  {
+    "type": "routebarree",
+    "severity": 1,
+    "location": {
+      "lat": 44.8378,
+      "lon": -0.5792
+    },
+    "dateAdded": "2023-08-19T16:00:00Z"
+  },
+  {
+    "type": "bouchon",
+    "severity": 5,
+    "location": {
+      "lat": 50.6292,
+      "lon": 3.0573
+    },
+    "dateAdded": "2023-08-19T18:00:00Z"
+  },
+  {
+    "type": "accident",
+    "severity": 3,
+    "location": {
+      "lat": 43.2965,
+      "lon": 5.3698
+    },
+    "dateAdded": "2023-08-19T20:00:00Z"
+  },
+  {
+    "type": "travaux",
+    "severity": 2,
+    "location": {
+      "lat": 45.7640,
+      "lon": 4.8357
+    },
+    "dateAdded": "2023-08-20T08:00:00Z"
+  },
+  {
+    "type": "police",
+    "severity": 4,
+    "location": {
+      "lat": 43.6108,
+      "lon": 3.8767
+    },
+    "dateAdded": "2023-08-20T10:00:00Z"
+  },
+  {
+    "type": "routebarree",
+    "severity": 5,
+    "location": {
+      "lat": 47.2184,
+      "lon": -1.5536
+    },
+    "dateAdded": "2023-08-20T12:00:00Z"
+  },
+  {
+    "type": "bouchon",
+    "severity": 1,
+    "location": {
+      "lat": 44.8378,
+      "lon": -0.5792
+    },
+    "dateAdded": "2023-08-20T14:00:00Z"
+  },
+  {
+    "type": "accident",
+    "severity": 2,
+    "location": {
+      "lat": 50.6292,
+      "lon": 3.0573
+    },
+    "dateAdded": "2023-08-20T16:00:00Z"
+  },
+  {
+    "type": "travaux",
+    "severity": 3,
+    "location": {
+      "lat": 43.2965,
+      "lon": 5.3698
+    },
+    "dateAdded": "2023-08-20T18:00:00Z"
+  },
+  {
+    "type": "police",
+    "severity": 1,
+    "location": {
+      "lat": 45.7640,
+      "lon": 4.8357
+    },
+    "dateAdded": "2023-08-20T20:00:00Z"
+  },
+  {
+    "type": "bouchon",
+    "severity": 4,
+    "location": {
+      "lat": 48.8566,
+      "lon": 2.3522
+    },
+    "dateAdded": "2023-08-21T08:00:00Z"
+  },
+  {
+    "type": "accident",
+    "severity": 3,
+    "location": {
+      "lat": 45.7640,
+      "lon": 4.8357
+    },
+    "dateAdded": "2023-08-21T10:00:00Z"
+  },
+  {
+    "type": "travaux",
+    "severity": 2,
+    "location": {
+      "lat": 43.6108,
+      "lon": 3.8767
+    },
+    "dateAdded": "2023-08-21T12:00:00Z"
+  },
+  {
+    "type": "police",
+    "severity": 5,
+    "location": {
+      "lat": 47.2184,
+      "lon": -1.5536
+    },
+    "dateAdded": "2023-08-21T14:00:00Z"
+  },
+  {
+    "type": "routebarree",
+    "severity": 1,
+    "location": {
+      "lat": 44.8378,
+      "lon": -0.5792
+    },
+    "dateAdded": "2023-08-21T16:00:00Z"
+  },
+  {
+    "type": "objet",
+    "severity": 3,
+    "location": {
+      "lat": 50.6292,
+      "lon": 3.0573
+    },
+    "dateAdded": "2023-08-21T18:00:00Z"
+  },
+  {
+    "type": "bouchon",
+    "severity": 3,
+    "location": {
+      "lat": 48.8566,
+      "lon": 2.3522
+    },
+    "dateAdded": "2023-08-01T08:15:00Z"
+  },
+  {
+    "type": "police",
+    "severity": 5,
+    "location": {
+      "lat": 43.6108,
+      "lon": 3.8767
+    },
+    "dateAdded": "2023-08-01T10:30:00Z"
+  },
+  {
+    "type": "routebarree",
+    "severity": 2,
+    "location": {
+      "lat": 45.7640,
+      "lon": 4.8357
+    },
+    "dateAdded": "2023-08-02T07:45:00Z"
+  },
+  {
+    "type": "objet",
+    "severity": 1,
+    "location": {
+      "lat": 47.2184,
+      "lon": -1.5536
+    },
+    "dateAdded": "2023-08-02T12:10:00Z"
+  },
+  {
+    "type": "bouchon",
+    "severity": 4,
+    "location": {
+      "lat": 43.2965,
+      "lon": 5.3698
+    },
+    "dateAdded": "2023-08-02T18:20:00Z"
+  },
+  {
+    "type": "police",
+    "severity": 2,
+    "location": {
+      "lat": 44.8378,
+      "lon": -0.5792
+    },
+    "dateAdded": "2023-08-03T09:00:00Z"
+  },
+  {
+    "type": "routebarree",
+    "severity": 5,
+    "location": {
+      "lat": 50.6292,
+      "lon": 3.0573
+    },
+    "dateAdded": "2023-08-03T11:15:00Z"
+  },
+  {
+    "type": "objet",
+    "severity": 3,
+    "location": {
+      "lat": 49.2583,
+      "lon": 4.0317
+    },
+    "dateAdded": "2023-08-03T14:50:00Z"
+  },
+  {
+    "type": "bouchon",
+    "severity": 5,
+    "location": {
+      "lat": 42.6987,
+      "lon": 9.4508
+    },
+    "dateAdded": "2023-08-04T06:25:00Z"
+  },
+  {
+    "type": "police",
+    "severity": 1,
+    "location": {
+      "lat": 45.8992,
+      "lon": 6.1294
+    },
+    "dateAdded": "2023-08-04T12:05:00Z"
+  },
+  {
+    "type": "routebarree",
+    "severity": 4,
+    "location": {
+      "lat": 43.0923,
+      "lon": -0.0466
+    },
+    "dateAdded": "2023-08-04T17:30:00Z"
+  },
+  {
+    "type": "objet",
+    "severity": 2,
+    "location": {
+      "lat": 47.2800,
+      "lon": 5.0933
+    },
+    "dateAdded": "2023-08-05T09:00:00Z"
+  },
+  {
+    "type": "bouchon",
+    "severity": 3,
+    "location": {
+      "lat": 44.9288,
+      "lon": 4.8880
+    },
+    "dateAdded": "2023-08-05T15:45:00Z"
+  },
+  {
+    "type": "police",
+    "severity": 2,
+    "location": {
+      "lat": 50.3705,
+      "lon": 2.7759
+    },
+    "dateAdded": "2023-08-05T19:20:00Z"
+  },
+  {
+    "type": "routebarree",
+    "severity": 1,
+    "location": {
+      "lat": 49.8942,
+      "lon": 2.2957
+    },
+    "dateAdded": "2023-08-06T08:05:00Z"
+  },
+  {
+    "type": "objet",
+    "severity": 5,
+    "location": {
+      "lat": 48.5839,
+      "lon": 7.7455
+    },
+    "dateAdded": "2023-08-06T13:10:00Z"
+  },
+  {
+    "type": "bouchon",
+    "severity": 2,
+    "location": {
+      "lat": 46.7694,
+      "lon": 4.8539
+    },
+    "dateAdded": "2023-08-06T16:40:00Z"
+  },
+  {
+    "type": "police",
+    "severity": 3,
+    "location": {
+      "lat": 43.5515,
+      "lon": 7.0160
+    },
+    "dateAdded": "2023-08-07T06:10:00Z"
+  },
+  {
+    "type": "routebarree",
+    "severity": 5,
+    "location": {
+      "lat": 47.3220,
+      "lon": 5.0415
+    },
+    "dateAdded": "2023-08-07T11:20:00Z"
+  },
+  {
+    "type": "objet",
+    "severity": 4,
+    "location": {
+      "lat": 44.5615,
+      "lon": 6.0789
+    },
+    "dateAdded": "2023-08-07T17:55:00Z"
+  },
+  {
+    "type": "bouchon",
+    "severity": 5,
+    "location": {
+      "lat": 43.5008,
+      "lon": 1.6310
+    },
+    "dateAdded": "2023-08-08T08:25:00Z"
+  },
+  {
+    "type": "police",
+    "severity": 4,
+    "location": {
+      "lat": 45.7579,
+      "lon": 4.8323
+    },
+    "dateAdded": "2023-08-08T12:15:00Z"
+  },
+  {
+    "type": "routebarree",
+    "severity": 3,
+    "location": {
+      "lat": 47.2378,
+      "lon": -1.6300
+    },
+    "dateAdded": "2023-08-08T19:40:00Z"
+  },
+  {
+    "type": "objet",
+    "severity": 1,
+    "location": {
+      "lat": 45.1715,
+      "lon": 1.5270
+    },
+    "dateAdded": "2023-08-09T07:00:00Z"
+  },
+  {
+    "type": "bouchon",
+    "severity": 1,
+    "location": {
+      "lat": 46.3116,
+      "lon": 2.6029
+    },
+    "dateAdded": "2023-08-09T10:10:00Z"
+  },
+  {
+    "type": "police",
+    "severity": 5,
+    "location": {
+      "lat": 48.0128,
+      "lon": 0.1996
+    },
+    "dateAdded": "2023-08-09T18:50:00Z"
+  },
+  {
+    "type": "routebarree",
+    "severity": 3,
+    "location": {
+      "lat": 49.4432,
+      "lon": 1.0993
+    },
+    "dateAdded": "2023-08-10T08:45:00Z"
+  },
+  {
+    "type": "objet",
+    "severity": 2,
+    "location": {
+      "lat": 47.6631,
+      "lon": -2.7580
+    },
+    "dateAdded": "2023-08-10T15:25:00Z"
+  },
+  {
+    "type": "bouchon",
+    "severity": 4,
+    "location": {
+      "lat": 45.0428,
+      "lon": 1.1450
+    },
+    "dateAdded": "2023-08-11T08:00:00Z"
+  },
+  {
+    "type": "police",
+    "severity": 3,
+    "location": {
+      "lat": 50.6784,
+      "lon": 2.6420
+    },
+    "dateAdded": "2023-08-11T10:15:00Z"
+  },
+  {
+    "type": "routebarree",
+    "severity": 1,
+    "location": {
+      "lat": 46.2044,
+      "lon": 5.2258
+    },
+    "dateAdded": "2023-08-11T16:50:00Z"
+  },
+  {
+    "type": "objet",
+    "severity": 5,
+    "location": {
+      "lat": 47.7508,
+      "lon": 7.3359
+    },
+    "dateAdded": "2023-08-12T09:25:00Z"
+  },
+  {
+    "type": "bouchon",
+    "severity": 1,
+    "location": {
+      "lat": 45.6086,
+      "lon": 3.0880
+    },
+    "dateAdded": "2023-08-12T11:55:00Z"
+  },
+  {
+    "type": "police",
+    "severity": 2,
+    "location": {
+      "lat": 44.8076,
+      "lon": -0.6034
+    },
+    "dateAdded": "2023-08-12T14:40:00Z"
+  },
+  {
+    "type": "routebarree",
+    "severity": 4,
+    "location": {
+      "lat": 44.0120,
+      "lon": 1.3632
+    },
+    "dateAdded": "2023-08-13T07:10:00Z"
+  },
+  {
+    "type": "objet",
+    "severity": 3,
+    "location": {
+      "lat": 45.8467,
+      "lon": 1.2611
+    },
+    "dateAdded": "2023-08-13T15:50:00Z"
+  },
+  {
+    "type": "bouchon",
+    "severity": 2,
+    "location": {
+      "lat": 48.2667,
+      "lon": 4.0667
+    },
+    "dateAdded": "2023-08-13T19:30:00Z"
+  },
+  {
+    "type": "police",
+    "severity": 5,
+    "location": {
+      "lat": 50.1103,
+      "lon": 1.8354
+    },
+    "dateAdded": "2023-08-14T08:05:00Z"
+  },
+  {
+    "type": "routebarree",
+    "severity": 2,
+    "location": {
+      "lat": 48.6800,
+      "lon": 6.1759
+    },
+    "dateAdded": "2023-08-14T11:20:00Z"
+  },
+  {
+    "type": "objet",
+    "severity": 4,
+    "location": {
+      "lat": 47.1195,
+      "lon": -1.2125
+    },
+    "dateAdded": "2023-08-14T17:45:00Z"
+  },
+  {
+    "type": "bouchon",
+    "severity": 1,
+    "location": {
+      "lat": 43.5528,
+      "lon": 7.0174
+    },
+    "dateAdded": "2023-08-15T07:00:00Z"
+  },
+  {
+    "type": "police",
+    "severity": 3,
+    "location": {
+      "lat": 49.2583,
+      "lon": 4.0317
+    },
+    "dateAdded": "2023-08-15T13:20:00Z"
+  },
+  {
+    "type": "routebarree",
+    "severity": 4,
+    "location": {
+      "lat": 46.2159,
+      "lon": 0.7219
+    },
+    "dateAdded": "2023-08-15T18:35:00Z"
+  },
+  {
+    "type": "objet",
+    "severity": 5,
+    "location": {
+      "lat": 44.3492,
+      "lon": 2.5750
+    },
+    "dateAdded": "2023-08-16T10:55:00Z"
+  },
+  {
+    "type": "bouchon",
+    "severity": 3,
+    "location": {
+      "lat": 49.0356,
+      "lon": 2.0631
+    },
+    "dateAdded": "2023-08-16T14:10:00Z"
+  },
+  {
+    "type": "police",
+    "severity": 1,
+    "location": {
+      "lat": 44.5580,
+      "lon": 6.0780
+    },
+    "dateAdded": "2023-08-16T19:30:00Z"
+  },
+  {
+    "type": "routebarree",
+    "severity": 2,
+    "location": {
+      "lat": 48.1022,
+      "lon": -1.6755
+    },
+    "dateAdded": "2023-08-17T07:45:00Z"
+  },
+  {
+    "type": "objet",
+    "severity": 3,
+    "location": {
+      "lat": 45.0073,
+      "lon": 2.3060
+    },
+    "dateAdded": "2023-08-17T13:05:00Z"
+  },
+  {
+    "type": "bouchon",
+    "severity": 4,
+    "location": {
+      "lat": 49.7751,
+      "lon": 0.3786
+    },
+    "dateAdded": "2023-08-17T20:50:00Z"
+  },
+  {
+    "type": "accident",
+    "severity": 5,
+    "location": {
+      "lat": 48.8566,
+      "lon": 2.3522
+    },
+    "dateAdded": "2023-08-18T08:15:00Z"
+  },
+  {
+    "type": "routebarree",
+    "severity": 3,
+    "location": {
+      "lat": 48.8566,
+      "lon": 2.3522
+    },
+    "dateAdded": "2023-08-18T10:00:00Z"
+  },
+  {
+    "type": "bouchon",
+    "severity": 2,
+    "location": {
+      "lat": 45.7640,
+      "lon": 4.8357
+    },
+    "dateAdded": "2023-08-18T12:00:00Z"
+  },
+  {
+    "type": "accident",
+    "severity": 4,
+    "location": {
+      "lat": 43.6108,
+      "lon": 3.8767
+    },
+    "dateAdded": "2023-08-18T14:00:00Z"
+  },
+  {
+    "type": "travaux",
+    "severity": 1,
+    "location": {
+      "lat": 47.2184,
+      "lon": -1.5536
+    },
+    "dateAdded": "2023-08-18T16:00:00Z"
+  },
+  {
+    "type": "police",
+    "severity": 5,
+    "location": {
+      "lat": 44.8378,
+      "lon": -0.5792
+    },
+    "dateAdded": "2023-08-18T18:00:00Z"
+  },
+  {
+    "type": "routebarree",
+    "severity": 2,
+    "location": {
+      "lat": 50.6292,
+      "lon": 3.0573
+    },
+    "dateAdded": "2023-08-18T20:00:00Z"
+  },
+  {
+    "type": "bouchon",
+    "severity": 3,
+    "location": {
+      "lat": 43.2965,
+      "lon": 5.3698
+    },
+    "dateAdded": "2023-08-19T08:00:00Z"
+  },
+  {
+    "type": "accident",
+    "severity": 5,
+    "location": {
+      "lat": 45.7640,
+      "lon": 4.8357
+    },
+    "dateAdded": "2023-08-19T10:00:00Z"
+  },
+  {
+    "type": "travaux",
+    "severity": 4,
+    "location": {
+      "lat": 43.6108,
+      "lon": 3.8767
+    },
+    "dateAdded": "2023-08-19T12:00:00Z"
+  },
+  {
+    "type": "police",
+    "severity": 2,
+    "location": {
+      "lat": 47.2184,
+      "lon": -1.5536
+    },
+    "dateAdded": "2023-08-19T14:00:00Z"
+  },
+  {
+    "type": "routebarree",
+    "severity": 1,
+    "location": {
+      "lat": 44.8378,
+      "lon": -0.5792
+    },
+    "dateAdded": "2023-08-19T16:00:00Z"
+  }
+]

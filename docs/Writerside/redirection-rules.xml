@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rules SYSTEM "https://resources.jetbrains.com/writerside/1.0/redirection-rules.dtd">
+<rules>
+    <!-- format is as follows
+    <rule id="<unique id>">
+        <accepts>page.html</accepts>
+    </rule>
+    -->
+    <rule id="49f9c265">
+        <description>Created after removal of "TEST" from 4PROJ-DOC</description>
+        <accepts>TEST.html</accepts>
+    </rule>
+    <rule id="74f1948f">
+        <description>Created after removal of "Authentification" from 4PROJ-DOC</description>
+        <accepts>Authentification.html</accepts>
+    </rule>
+    <rule id="8ec296b">
+        <description>Created after removal of "Sécurité et Authentification" from 4PROJ-DOC</description>
+        <accepts>Sécurité-et-Authentification.html</accepts>
+    </rule>
+    <rule id="147a1fe5">
+        <description>Created after removal of "Fonctionnalitées" from 4PROJ-DOC</description>
+        <accepts>Fonctionnalitées.html</accepts>
+    </rule>
+    <rule id="7c2b1b11">
+        <description>Created after removal of "Fonctionnalitées cartographique" from 4PROJ-DOC</description>
+        <accepts>Fonctionnalitées-carthographique.html</accepts>
+    </rule>
+    <rule id="3118eae5">
+        <description>Created after removal of "Services" from 4PROJ-DOC</description>
+        <accepts>Services.html</accepts>
+    </rule>
+    <rule id="601c5716">
+        <description>Created after removal of "Signalement sur la carte" from 4PROJ-DOC</description>
+        <accepts>Signalement-sur-la-carte.html</accepts>
+    </rule>
+    <rule id="62e2a4e5">
+        <description>Created after removal of "About 4PROJ-DOC" from 4PROJ-DOC</description>
+        <accepts>starter-topic.html</accepts>
+    </rule>
+    <rule id="7bb51aae">
+        <description>Created after removal of "Compte" from 4PROJ-DOC</description>
+        <accepts>Compte.html</accepts>
+    </rule>
+</rules>

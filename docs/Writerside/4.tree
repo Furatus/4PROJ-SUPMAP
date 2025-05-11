@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="4"
+                 name="4PROJ-DOC"
+                 start-page="Accueil.md">
+
+    <toc-element topic="Accueil.md">
+    </toc-element>
+    <toc-element topic="Installation.md"/>
+    <toc-element topic="Application-Mobile.md">
+        <toc-element topic="Navigation.md">
+            <toc-element topic="Géolocalisation.md"/>
+            <toc-element topic="Signalement.md"/>
+        </toc-element>
+        <toc-element topic="Paramètres.md"/>
+        <toc-element topic="Authentification.md"/>
+    </toc-element>
+    <toc-element topic="Interface-Web.md">
+        <toc-element topic="Carte-interactive.md">
+        </toc-element>
+        <toc-element topic="Recherche.md"/>
+        <toc-element topic="Signalement-à-proximité.md"/>
+        <toc-element topic="Authentification-Web.md"/>
+        <toc-element topic="Statistiques.md"/>
+        <toc-element topic="Partage-de-QR-Code.md"/>
+    </toc-element>
+    <toc-element topic="Serveur.md">
+        <toc-element topic="Configuration HTTPS.md"/>
+        <toc-element topic="Graphhopper.md"/>
+        <toc-element topic="API.md"/>
+        <toc-element topic="Base-de-Données.md"/>
+    </toc-element>
+</instance-profile>
