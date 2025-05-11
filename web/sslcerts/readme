@@ -1,0 +1,3 @@
+Use your own certificates in this directory.
+
+certificates must be in the SSL format key/crt.
